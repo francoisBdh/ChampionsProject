@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis xmi:id="_E8FuEM3DEeego8vLytuy5Q" selectedViews="_FA0dEM3DEeego8vLytuy5Q" version="12.0.0.201704271200">
+    <semanticResources>championsProject.ecore</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" xmi:id="_FA0dEM3DEeego8vLytuy5Q">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_FGmU8M3DEeego8vLytuy5Q" name="championsProject" repPath="#_FGkfwM3DEeego8vLytuy5Q">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="championsProject.ecore#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram xmi:id="_FGkfwM3DEeego8vLytuy5Q" name="championsProject">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_FGkfwc3DEeego8vLytuy5Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_FGkfws3DEeego8vLytuy5Q"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_FG2zoM3DEeego8vLytuy5Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_FG2zoc3DEeego8vLytuy5Q" type="Sirius" element="_FGkfwM3DEeego8vLytuy5Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_TeNzYM3GEeego8vLytuy5Q" type="2003" element="_Td6RYM3GEeego8vLytuy5Q">
+          <children xmi:type="notation:Node" xmi:id="_TeSE0M3GEeego8vLytuy5Q" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_TeSE0c3GEeego8vLytuy5Q" type="7004">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_TeSE0s3GEeego8vLytuy5Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_TeSE083GEeego8vLytuy5Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_TeNzYc3GEeego8vLytuy5Q" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TeNzYs3GEeego8vLytuy5Q" x="444" y="132" width="187" height="103"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_FG2zos3DEeego8vLytuy5Q"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Td6RYM3GEeego8vLytuy5Q" name="Team" tooltipText="" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="championsProject.ecore#//Team"/>
+      <semanticElements xmi:type="ecore:EClass" href="championsProject.ecore#//Team"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_Td_J4M3GEeego8vLytuy5Q" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_FGkfxM3DEeego8vLytuy5Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <target xmi:type="ecore:EPackage" href="championsProject.ecore#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
