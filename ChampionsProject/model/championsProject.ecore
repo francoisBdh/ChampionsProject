@@ -17,6 +17,7 @@
         upperBound="-1" eType="#//Competition" eOpposite="#//Competition/team"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trophy" upperBound="-1"
         eType="#//Trophy" eOpposite="#//Trophy/team"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TeamType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
     <eStructuralFeatures xsi:type="ecore:EReference" name="competition" upperBound="-1"
@@ -93,5 +94,10 @@
   <eClassifiers xsi:type="ecore:EEnum" name="CompetitionType">
     <eLiterals name="championship" literal="CHP"/>
     <eLiterals name="cup" value="1" literal="CUP"/>
+    <eLiterals name="worldCup" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TeamType">
+    <eLiterals name="town" literal="TWN"/>
+    <eLiterals name="national" value="1" literal="NTL"/>
   </eClassifiers>
 </ecore:EPackage>

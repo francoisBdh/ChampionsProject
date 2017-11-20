@@ -32,6 +32,11 @@
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="championsProject.ecore#//CompetitionType">
       <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//CompetitionType/championship"/>
       <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//CompetitionType/cup"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//CompetitionType/worldCup"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="championsProject.ecore#//TeamType">
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//TeamType/town"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//TeamType/national"/>
     </genEnums>
     <genClasses ecoreClass="championsProject.ecore#//Team">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/player"/>
@@ -41,6 +46,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Team/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/competition"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/trophy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Team/type"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Country">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Country/competition"/>
