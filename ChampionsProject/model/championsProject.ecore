@@ -2,5 +2,54 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="championsProject" nsURI="http://www.example.org/championsProject"
     nsPrefix="championsProject">
-  <eClassifiers xsi:type="ecore:EClass" name="Team"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Team">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" upperBound="-1"
+        eType="#//Player" eOpposite="#//Player/team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="president" lowerBound="1"
+        eType="#//President" eOpposite="#//President/team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coach" lowerBound="1" eType="#//Coach"
+        eOpposite="#//Coach/team"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stadium" lowerBound="1"
+        eType="#//Stadium" eOpposite="#//Stadium/team"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listHonours"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Country">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="competition" upperBound="-1"
+        eType="#//Competition" eOpposite="#//Competition/country"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" upperBound="-1"
+        eType="#//Person" eOpposite="#//Person/country"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="country" lowerBound="1"
+        eType="#//Country" eOpposite="#//Country/person"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Player">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/player"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Competition" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"
+        eOpposite="#//Country/competition"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="honours"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Championship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="President">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/president"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Coach">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/coach"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Stadium">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="team" upperBound="-1" eType="#//Team"
+        eOpposite="#//Team/stadium"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity"/>
+  </eClassifiers>
 </ecore:EPackage>
