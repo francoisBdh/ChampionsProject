@@ -1,0 +1,53 @@
+
+Country :
+
+- name
+- competitions
+
+Competitions :
+
+- name
+- team
+- honours
+
+        Championship :
+
+        Cup :
+
+Person :
+
+- name 
+- nationality
+- team
+- age
+
+            Player :
+
+            - position
+            - status (exemple : starter, substitute, injured, etc...)
+            
+            President :
+
+            Coach :
+
+
+Team :
+
+- name
+- players
+- stadium
+- coach
+- president
+- honours
+
+
+Stadium :
+
+- name
+- country
+- capacity
+
+
+
+
+
