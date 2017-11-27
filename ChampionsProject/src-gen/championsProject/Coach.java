@@ -60,7 +60,7 @@ public interface Coach extends Person {
 	 * @return the value of the '<em>Contrat</em>' attribute.
 	 * @see #setContrat(int)
 	 * @see championsProject.ChampionsProjectPackage#getCoach_Contrat()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @model
 	 * @generated
 	 */
 	int getContrat();

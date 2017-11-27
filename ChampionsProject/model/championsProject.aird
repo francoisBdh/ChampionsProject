@@ -490,7 +490,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GSjboM3MEeego8vLytuy5Q" name="name : String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_GSjboM3MEeego8vLytuy5Q" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Team/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Team/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_0fsyIc3YEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -517,7 +517,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_817dQM3YEeego8vLytuy5Q" name="name : String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_817dQM3YEeego8vLytuy5Q" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Country/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Country/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_817dQc3YEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -537,7 +537,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Mdbe8M3LEeego8vLytuy5Q" name="age : Int" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_Mdbe8M3LEeego8vLytuy5Q" name="age : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Person/age"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Person/age"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_ZO3s8c3SEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -545,7 +545,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Fuz0M3YEeego8vLytuy5Q" name="name : String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Fuz0M3YEeego8vLytuy5Q" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Person/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Person/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_9Fuz0c3YEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -580,7 +580,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_m5a1UNNMEeeRDtP1vYYYag" name="contrat : Int" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_m5a1UNNMEeeRDtP1vYYYag" name="contrat : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Player/contrat"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Player/contrat"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_1xhSANNMEeeRDtP1vYYYag" labelAlignment="LEFT">
@@ -607,7 +607,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-Kte4M3YEeego8vLytuy5Q" name="name : String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_-Kte4M3YEeego8vLytuy5Q" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Competition/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Competition/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_-Kte4c3YEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -637,7 +637,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hMjZINNMEeeRDtP1vYYYag" name="contrat : Int" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_hMjZINNMEeeRDtP1vYYYag" name="contrat : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Coach/contrat"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Coach/contrat"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_mJlT0NNMEeeRDtP1vYYYag" labelAlignment="LEFT">
@@ -656,7 +656,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_5b5SQM3LEeego8vLytuy5Q" name="capacity : Integer" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_5b5SQM3LEeego8vLytuy5Q" name="capacity : EInt" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Stadium/capacity"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Stadium/capacity"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_c5VMgc3SEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -664,7 +664,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9nAU4M3YEeego8vLytuy5Q" name="name : String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9nAU4M3YEeego8vLytuy5Q" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Stadium/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Stadium/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_9nAU4c3YEeego8vLytuy5Q" labelAlignment="LEFT">
@@ -840,7 +840,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_8WYagM3YEeego8vLytuy5Q" name="name : String" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_8WYagM3YEeego8vLytuy5Q" name="name : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="championsProject.ecore#//Trophy/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="championsProject.ecore#//Trophy/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_8WYagc3YEeego8vLytuy5Q" labelAlignment="LEFT">

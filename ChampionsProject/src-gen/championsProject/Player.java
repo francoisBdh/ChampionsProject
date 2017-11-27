@@ -120,7 +120,7 @@ public interface Player extends Person {
 	 * @return the value of the '<em>Contrat</em>' attribute.
 	 * @see #setContrat(int)
 	 * @see championsProject.ChampionsProjectPackage#getPlayer_Contrat()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @model
 	 * @generated
 	 */
 	int getContrat();

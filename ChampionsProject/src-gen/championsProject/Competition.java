@@ -124,7 +124,7 @@ public interface Competition extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see championsProject.ChampionsProjectPackage#getCompetition_Name()
-	 * @model default="" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model default=""
 	 * @generated
 	 */
 	String getName();

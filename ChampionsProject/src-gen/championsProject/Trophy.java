@@ -65,7 +65,7 @@ public interface Trophy extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see championsProject.ChampionsProjectPackage#getTrophy_Name()
-	 * @model default="" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model default=""
 	 * @generated
 	 */
 	String getName();

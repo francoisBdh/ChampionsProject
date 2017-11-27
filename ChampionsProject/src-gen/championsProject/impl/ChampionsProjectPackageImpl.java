@@ -27,8 +27,6 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
@@ -182,9 +180,6 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 						: new ChampionsProjectPackageImpl());
 
 		isInited = true;
-
-		// Initialize simple dependencies
-		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theChampionsProjectPackage.createPackageContents();
@@ -766,10 +761,6 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
-				.getEPackage(XMLTypePackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -794,7 +785,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		initEReference(getTeam_Stadium(), this.getStadium(), this.getStadium_Team(), "stadium", null, 1, 1, Team.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTeam_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Team.class, !IS_TRANSIENT,
+		initEAttribute(getTeam_Name(), ecorePackage.getEString(), "name", "", 0, 1, Team.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTeam_Competition(), this.getCompetition(), this.getCompetition_Team(), "competition", null, 1,
 				-1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
@@ -812,16 +803,16 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		initEReference(getCountry_Person(), this.getPerson(), this.getPerson_Country(), "person", null, 0, -1,
 				Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCountry_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Country.class, !IS_TRANSIENT,
+		initEAttribute(getCountry_Name(), ecorePackage.getEString(), "name", "", 0, 1, Country.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPerson_Age(), theXMLTypePackage.getInt(), "age", null, 0, 1, Person.class, !IS_TRANSIENT,
+		initEAttribute(getPerson_Age(), ecorePackage.getEInt(), "age", null, 0, 1, Person.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPerson_Country(), this.getCountry(), this.getCountry_Person(), "country", null, 1, 1,
 				Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerson_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Person.class, !IS_TRANSIENT,
+		initEAttribute(getPerson_Name(), ecorePackage.getEString(), "name", "", 0, 1, Person.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(playerEClass, Player.class, "Player", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -832,8 +823,8 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Status(), this.getPlayerStatus(), "status", null, 0, 1, Player.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPlayer_Contrat(), theXMLTypePackage.getInt(), "contrat", null, 0, 1, Player.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPlayer_Contrat(), ecorePackage.getEInt(), "contrat", null, 0, 1, Player.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlayer_Agent(), this.getAgent(), this.getAgent_Player(), "agent", null, 0, 1, Player.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -848,7 +839,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCompetition_Type(), this.getCompetitionType(), "type", null, 0, 1, Competition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCompetition_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Competition.class,
+		initEAttribute(getCompetition_Name(), ecorePackage.getEString(), "name", "", 0, 1, Competition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCompetition_Team(), this.getTeam(), this.getTeam_Competition(), "team", null, 1, -1,
 				Competition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
@@ -864,8 +855,8 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		initEReference(getCoach_Team(), this.getTeam(), this.getTeam_Coach(), "team", null, 0, 1, Coach.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCoach_Contrat(), theXMLTypePackage.getInt(), "contrat", null, 0, 1, Coach.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCoach_Contrat(), ecorePackage.getEInt(), "contrat", null, 0, 1, Coach.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCoach_Agent(), this.getAgent(), this.getAgent_Coach(), "agent", null, 0, 1, Coach.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -874,16 +865,16 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		initEReference(getStadium_Team(), this.getTeam(), this.getTeam_Stadium(), "team", null, 0, -1, Stadium.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStadium_Capacity(), theXMLTypePackage.getInteger(), "capacity", null, 0, 1, Stadium.class,
+		initEAttribute(getStadium_Capacity(), ecorePackage.getEInt(), "capacity", null, 0, 1, Stadium.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStadium_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Stadium.class, !IS_TRANSIENT,
+		initEAttribute(getStadium_Name(), ecorePackage.getEString(), "name", "", 0, 1, Stadium.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trophyEClass, Trophy.class, "Trophy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTrophy_Competition(), this.getCompetition(), this.getCompetition_Trophy(), "competition",
 				null, 1, 1, Trophy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTrophy_Name(), theXMLTypePackage.getString(), "name", "", 0, 1, Trophy.class, !IS_TRANSIENT,
+		initEAttribute(getTrophy_Name(), ecorePackage.getEString(), "name", "", 0, 1, Trophy.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTrophy_Team(), this.getTeam(), this.getTeam_Trophy(), "team", null, 0, -1, Trophy.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,

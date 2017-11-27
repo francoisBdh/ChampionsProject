@@ -2,8 +2,6 @@
  */
 package championsProject;
 
-import java.math.BigInteger;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -54,12 +52,12 @@ public interface Stadium extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Capacity</em>' attribute.
-	 * @see #setCapacity(BigInteger)
+	 * @see #setCapacity(int)
 	 * @see championsProject.ChampionsProjectPackage#getStadium_Capacity()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Integer"
+	 * @model
 	 * @generated
 	 */
-	BigInteger getCapacity();
+	int getCapacity();
 
 	/**
 	 * Sets the value of the '{@link championsProject.Stadium#getCapacity <em>Capacity</em>}' attribute.
@@ -69,7 +67,7 @@ public interface Stadium extends EObject {
 	 * @see #getCapacity()
 	 * @generated
 	 */
-	void setCapacity(BigInteger value);
+	void setCapacity(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -83,7 +81,7 @@ public interface Stadium extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see championsProject.ChampionsProjectPackage#getStadium_Name()
-	 * @model default="" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model default=""
 	 * @generated
 	 */
 	String getName();

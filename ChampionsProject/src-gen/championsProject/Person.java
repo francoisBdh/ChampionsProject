@@ -34,7 +34,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Age</em>' attribute.
 	 * @see #setAge(int)
 	 * @see championsProject.ChampionsProjectPackage#getPerson_Age()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @model
 	 * @generated
 	 */
 	int getAge();
@@ -89,7 +89,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see championsProject.ChampionsProjectPackage#getPerson_Name()
-	 * @model default="" dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model default=""
 	 * @generated
 	 */
 	String getName();

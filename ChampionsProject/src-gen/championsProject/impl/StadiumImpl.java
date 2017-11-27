@@ -5,9 +5,6 @@ package championsProject.impl;
 import championsProject.ChampionsProjectPackage;
 import championsProject.Stadium;
 import championsProject.Team;
-
-import java.math.BigInteger;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -58,7 +55,7 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	 * @generated
 	 * @ordered
 	 */
-	protected static final BigInteger CAPACITY_EDEFAULT = null;
+	protected static final int CAPACITY_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getCapacity() <em>Capacity</em>}' attribute.
@@ -68,7 +65,7 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	 * @generated
 	 * @ordered
 	 */
-	protected BigInteger capacity = CAPACITY_EDEFAULT;
+	protected int capacity = CAPACITY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -127,7 +124,7 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BigInteger getCapacity() {
+	public int getCapacity() {
 		return capacity;
 	}
 
@@ -136,8 +133,8 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCapacity(BigInteger newCapacity) {
-		BigInteger oldCapacity = capacity;
+	public void setCapacity(int newCapacity) {
+		int oldCapacity = capacity;
 		capacity = newCapacity;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ChampionsProjectPackage.STADIUM__CAPACITY,
@@ -227,7 +224,7 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 			getTeam().addAll((Collection<? extends Team>) newValue);
 			return;
 		case ChampionsProjectPackage.STADIUM__CAPACITY:
-			setCapacity((BigInteger) newValue);
+			setCapacity((Integer) newValue);
 			return;
 		case ChampionsProjectPackage.STADIUM__NAME:
 			setName((String) newValue);
@@ -268,7 +265,7 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 		case ChampionsProjectPackage.STADIUM__TEAM:
 			return team != null && !team.isEmpty();
 		case ChampionsProjectPackage.STADIUM__CAPACITY:
-			return CAPACITY_EDEFAULT == null ? capacity != null : !CAPACITY_EDEFAULT.equals(capacity);
+			return capacity != CAPACITY_EDEFAULT;
 		case ChampionsProjectPackage.STADIUM__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
