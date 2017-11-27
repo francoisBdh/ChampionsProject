@@ -36,8 +36,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Player" eSuperTypes="#//Person">
     <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/player"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//PlayerPosition.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//PlayerPosition"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//PlayerStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrat" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agent" eType="#//Agent"
+        eOpposite="#//Agent/player"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Competition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"
@@ -55,6 +58,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Coach" eSuperTypes="#//Person">
     <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/coach"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrat" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agent" eType="#//Agent"
+        eOpposite="#//Agent/coach"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Stadium">
     <eStructuralFeatures xsi:type="ecore:EReference" name="team" upperBound="-1" eType="#//Team"
@@ -68,10 +74,6 @@
     <eLiterals name="substitute" value="1" literal="SBT"/>
     <eLiterals name="injured" value="2" literal="IJD"/>
     <eLiterals name="suspended" value="3" literal="SPD"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="PlayerPosition">
-    <eLiterals name="miedfielder"/>
-    <eLiterals name="LITERAL1" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PlayerPosition">
     <eLiterals name="centralMidfielder" literal="CM"/>
@@ -99,5 +101,11 @@
   <eClassifiers xsi:type="ecore:EEnum" name="TeamType">
     <eLiterals name="town" literal="TWN"/>
     <eLiterals name="national" value="1" literal="NTL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Agent" eSuperTypes="#//Person">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" upperBound="-1"
+        eType="#//Player" eOpposite="#//Player/agent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coach" upperBound="-1"
+        eType="#//Coach" eOpposite="#//Coach/agent"/>
   </eClassifiers>
 </ecore:EPackage>

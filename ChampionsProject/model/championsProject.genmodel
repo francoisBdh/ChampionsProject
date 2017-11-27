@@ -16,18 +16,14 @@
       <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerStatus/suspended"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="championsProject.ecore#//PlayerPosition">
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/miedfielder"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/LITERAL1"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="championsProject.ecore#//PlayerPosition.1">
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/centralMidfielder"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/centralBack"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/goalKeeper"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/leftMidfielder"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/rightMidfielder"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/rightBack"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/leftBack"/>
-      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition.1/striker"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/centralMidfielder"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/centralBack"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/goalKeeper"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/leftMidfielder"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/rightMidfielder"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/rightBack"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/leftBack"/>
+      <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//PlayerPosition/striker"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="championsProject.ecore#//CompetitionType">
       <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//CompetitionType/championship"/>
@@ -62,6 +58,8 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Player/team"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Player/position"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Player/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Player/contrat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Player/agent"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Competition">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Competition/country"/>
@@ -75,6 +73,8 @@
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Coach">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Coach/team"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Coach/contrat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Coach/agent"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Stadium">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Stadium/team"/>
@@ -85,6 +85,10 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Trophy/competition"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Trophy/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Trophy/team"/>
+    </genClasses>
+    <genClasses ecoreClass="championsProject.ecore#//Agent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Agent/player"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Agent/coach"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
