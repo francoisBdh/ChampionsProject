@@ -13,24 +13,20 @@
         eType="#//Stadium" eOpposite="#//Stadium/team"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="competition" lowerBound="1"
-        upperBound="-1" eType="#//Competition" eOpposite="#//Competition/team"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trophy" upperBound="-1"
         eType="#//Trophy" eOpposite="#//Trophy/team"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TeamType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="competition" upperBound="-1"
-        eType="#//Competition" eOpposite="#//Competition/country"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="person" upperBound="-1"
-        eType="#//Person" eOpposite="#//Person/country"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="competition" upperBound="-1"
+        eType="#//Competition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="person" upperBound="-1"
+        eType="#//Person" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="country" lowerBound="1"
-        eType="#//Country" eOpposite="#//Country/person"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
   </eClassifiers>
@@ -43,15 +39,13 @@
         eOpposite="#//Agent/player"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Competition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="country" eType="#//Country"
-        eOpposite="#//Country/competition"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="trophy" lowerBound="1"
         eType="#//Trophy" eOpposite="#//Trophy/competition"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//CompetitionType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="team" lowerBound="1" upperBound="-1"
-        eType="#//Team" eOpposite="#//Team/competition"/>
+        eType="#//Team" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="President" eSuperTypes="#//Person">
     <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/president"/>
@@ -107,5 +101,9 @@
         eType="#//Player" eOpposite="#//Player/agent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="coach" upperBound="-1"
         eType="#//Coach" eOpposite="#//Coach/agent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fifa">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="country" lowerBound="1"
+        upperBound="-1" eType="#//Country" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
