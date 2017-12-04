@@ -3,12 +3,6 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="championsProject" nsURI="http://www.example.org/championsProject"
     nsPrefix="championsProject">
   <eClassifiers xsi:type="ecore:EClass" name="Team">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="player" lowerBound="1"
-        upperBound="-1" eType="#//Player" eOpposite="#//Player/team"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="president" lowerBound="1"
-        eType="#//President" eOpposite="#//President/team"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="coach" lowerBound="1" eType="#//Coach"
-        eOpposite="#//Coach/team"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stadium" lowerBound="1"
         eType="#//Stadium" eOpposite="#//Stadium/team"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -16,6 +10,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="trophy" upperBound="-1"
         eType="#//Trophy" eOpposite="#//Trophy/team"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TeamType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="president" lowerBound="1"
+        eType="#//President" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="coach" lowerBound="1" eType="#//Coach"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="player" lowerBound="1"
+        upperBound="-1" eType="#//Player" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Country">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -31,7 +31,6 @@
         defaultValueLiteral=""/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Player" eSuperTypes="#//Person">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/player"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="#//PlayerPosition"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="#//PlayerStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -47,11 +46,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="team" lowerBound="1" upperBound="-1"
         eType="#//Team" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="President" eSuperTypes="#//Person">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/president"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="President" eSuperTypes="#//Person"/>
   <eClassifiers xsi:type="ecore:EClass" name="Coach" eSuperTypes="#//Person">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="team" eType="#//Team" eOpposite="#//Team/coach"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="contrat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="agent" eType="#//Agent"
         eOpposite="#//Agent/coach"/>
