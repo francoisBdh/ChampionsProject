@@ -5,8 +5,6 @@ package championsProject.impl;
 import championsProject.Agent;
 import championsProject.ChampionsProjectPackage;
 import championsProject.Coach;
-import championsProject.Team;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -23,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link championsProject.impl.CoachImpl#getTeam <em>Team</em>}</li>
  *   <li>{@link championsProject.impl.CoachImpl#getContrat <em>Contrat</em>}</li>
  *   <li>{@link championsProject.impl.CoachImpl#getAgent <em>Agent</em>}</li>
  * </ul>
@@ -31,16 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class CoachImpl extends PersonImpl implements Coach {
-	/**
-	 * The cached value of the '{@link #getTeam() <em>Team</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTeam()
-	 * @generated
-	 * @ordered
-	 */
-	protected Team team;
-
 	/**
 	 * The default value of the '{@link #getContrat() <em>Contrat</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,74 +75,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	protected EClass eStaticClass() {
 		return ChampionsProjectPackage.Literals.COACH;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Team getTeam() {
-		if (team != null && team.eIsProxy()) {
-			InternalEObject oldTeam = (InternalEObject) team;
-			team = (Team) eResolveProxy(oldTeam);
-			if (team != oldTeam) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ChampionsProjectPackage.COACH__TEAM,
-							oldTeam, team));
-			}
-		}
-		return team;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Team basicGetTeam() {
-		return team;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTeam(Team newTeam, NotificationChain msgs) {
-		Team oldTeam = team;
-		team = newTeam;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ChampionsProjectPackage.COACH__TEAM, oldTeam, newTeam);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTeam(Team newTeam) {
-		if (newTeam != team) {
-			NotificationChain msgs = null;
-			if (team != null)
-				msgs = ((InternalEObject) team).eInverseRemove(this, ChampionsProjectPackage.TEAM__COACH, Team.class,
-						msgs);
-			if (newTeam != null)
-				msgs = ((InternalEObject) newTeam).eInverseAdd(this, ChampionsProjectPackage.TEAM__COACH, Team.class,
-						msgs);
-			msgs = basicSetTeam(newTeam, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChampionsProjectPackage.COACH__TEAM, newTeam,
-					newTeam));
 	}
 
 	/**
@@ -256,11 +175,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COACH__TEAM:
-			if (team != null)
-				msgs = ((InternalEObject) team).eInverseRemove(this, ChampionsProjectPackage.TEAM__COACH, Team.class,
-						msgs);
-			return basicSetTeam((Team) otherEnd, msgs);
 		case ChampionsProjectPackage.COACH__AGENT:
 			if (agent != null)
 				msgs = ((InternalEObject) agent).eInverseRemove(this, ChampionsProjectPackage.AGENT__COACH, Agent.class,
@@ -278,8 +192,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COACH__TEAM:
-			return basicSetTeam(null, msgs);
 		case ChampionsProjectPackage.COACH__AGENT:
 			return basicSetAgent(null, msgs);
 		}
@@ -294,10 +206,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COACH__TEAM:
-			if (resolve)
-				return getTeam();
-			return basicGetTeam();
 		case ChampionsProjectPackage.COACH__CONTRAT:
 			return getContrat();
 		case ChampionsProjectPackage.COACH__AGENT:
@@ -316,9 +224,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COACH__TEAM:
-			setTeam((Team) newValue);
-			return;
 		case ChampionsProjectPackage.COACH__CONTRAT:
 			setContrat((Integer) newValue);
 			return;
@@ -337,9 +242,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COACH__TEAM:
-			setTeam((Team) null);
-			return;
 		case ChampionsProjectPackage.COACH__CONTRAT:
 			setContrat(CONTRAT_EDEFAULT);
 			return;
@@ -358,8 +260,6 @@ public class CoachImpl extends PersonImpl implements Coach {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COACH__TEAM:
-			return team != null;
 		case ChampionsProjectPackage.COACH__CONTRAT:
 			return contrat != CONTRAT_EDEFAULT;
 		case ChampionsProjectPackage.COACH__AGENT:

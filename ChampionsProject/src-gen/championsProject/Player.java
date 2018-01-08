@@ -11,7 +11,6 @@ package championsProject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Player#getTeam <em>Team</em>}</li>
  *   <li>{@link championsProject.Player#getPosition <em>Position</em>}</li>
  *   <li>{@link championsProject.Player#getStatus <em>Status</em>}</li>
  *   <li>{@link championsProject.Player#getContrat <em>Contrat</em>}</li>
@@ -23,34 +22,6 @@ package championsProject;
  * @generated
  */
 public interface Player extends Person {
-	/**
-	 * Returns the value of the '<em><b>Team</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Team#getPlayer <em>Player</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Team</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team</em>' reference.
-	 * @see #setTeam(Team)
-	 * @see championsProject.ChampionsProjectPackage#getPlayer_Team()
-	 * @see championsProject.Team#getPlayer
-	 * @model opposite="player"
-	 * @generated
-	 */
-	Team getTeam();
-
-	/**
-	 * Sets the value of the '{@link championsProject.Player#getTeam <em>Team</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Team</em>' reference.
-	 * @see #getTeam()
-	 * @generated
-	 */
-	void setTeam(Team value);
-
 	/**
 	 * Returns the value of the '<em><b>Position</b></em>' attribute.
 	 * The literals are from the enumeration {@link championsProject.PlayerPosition}.

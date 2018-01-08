@@ -15,9 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Country#getCompetition <em>Competition</em>}</li>
- *   <li>{@link championsProject.Country#getPerson <em>Person</em>}</li>
  *   <li>{@link championsProject.Country#getName <em>Name</em>}</li>
+ *   <li>{@link championsProject.Country#getCompetition <em>Competition</em>}</li>
  * </ul>
  *
  * @see championsProject.ChampionsProjectPackage#getCountry()
@@ -26,40 +25,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Country extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Competition</b></em>' reference list.
+	 * Returns the value of the '<em><b>Competition</b></em>' containment reference list.
 	 * The list contents are of type {@link championsProject.Competition}.
-	 * It is bidirectional and its opposite is '{@link championsProject.Competition#getCountry <em>Country</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Competition</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Competition</em>' reference list.
+	 * @return the value of the '<em>Competition</em>' containment reference list.
 	 * @see championsProject.ChampionsProjectPackage#getCountry_Competition()
-	 * @see championsProject.Competition#getCountry
-	 * @model opposite="country"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Competition> getCompetition();
-
-	/**
-	 * Returns the value of the '<em><b>Person</b></em>' reference list.
-	 * The list contents are of type {@link championsProject.Person}.
-	 * It is bidirectional and its opposite is '{@link championsProject.Person#getCountry <em>Country</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Person</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Person</em>' reference list.
-	 * @see championsProject.ChampionsProjectPackage#getCountry_Person()
-	 * @see championsProject.Person#getCountry
-	 * @model opposite="country"
-	 * @generated
-	 */
-	EList<Person> getPerson();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

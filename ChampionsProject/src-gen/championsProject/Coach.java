@@ -11,7 +11,6 @@ package championsProject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Coach#getTeam <em>Team</em>}</li>
  *   <li>{@link championsProject.Coach#getContrat <em>Contrat</em>}</li>
  *   <li>{@link championsProject.Coach#getAgent <em>Agent</em>}</li>
  * </ul>
@@ -21,34 +20,6 @@ package championsProject;
  * @generated
  */
 public interface Coach extends Person {
-	/**
-	 * Returns the value of the '<em><b>Team</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Team#getCoach <em>Coach</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Team</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team</em>' reference.
-	 * @see #setTeam(Team)
-	 * @see championsProject.ChampionsProjectPackage#getCoach_Team()
-	 * @see championsProject.Team#getCoach
-	 * @model opposite="coach"
-	 * @generated
-	 */
-	Team getTeam();
-
-	/**
-	 * Sets the value of the '{@link championsProject.Coach#getTeam <em>Team</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Team</em>' reference.
-	 * @see #getTeam()
-	 * @generated
-	 */
-	void setTeam(Team value);
-
 	/**
 	 * Returns the value of the '<em><b>Contrat</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -5,7 +5,6 @@ package championsProject.impl;
 import championsProject.ChampionsProjectPackage;
 import championsProject.Competition;
 import championsProject.CompetitionType;
-import championsProject.Country;
 import championsProject.Team;
 import championsProject.Trophy;
 
@@ -22,7 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -33,7 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link championsProject.impl.CompetitionImpl#getCountry <em>Country</em>}</li>
  *   <li>{@link championsProject.impl.CompetitionImpl#getTrophy <em>Trophy</em>}</li>
  *   <li>{@link championsProject.impl.CompetitionImpl#getType <em>Type</em>}</li>
  *   <li>{@link championsProject.impl.CompetitionImpl#getName <em>Name</em>}</li>
@@ -43,16 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class CompetitionImpl extends MinimalEObjectImpl.Container implements Competition {
-	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountry()
-	 * @generated
-	 * @ordered
-	 */
-	protected Country country;
-
 	/**
 	 * The cached value of the '{@link #getTrophy() <em>Trophy</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -104,7 +92,7 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTeam() <em>Team</em>}' reference list.
+	 * The cached value of the '{@link #getTeam() <em>Team</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTeam()
@@ -130,74 +118,6 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	protected EClass eStaticClass() {
 		return ChampionsProjectPackage.Literals.COMPETITION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Country getCountry() {
-		if (country != null && country.eIsProxy()) {
-			InternalEObject oldCountry = (InternalEObject) country;
-			country = (Country) eResolveProxy(oldCountry);
-			if (country != oldCountry) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ChampionsProjectPackage.COMPETITION__COUNTRY, oldCountry, country));
-			}
-		}
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Country basicGetCountry() {
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCountry(Country newCountry, NotificationChain msgs) {
-		Country oldCountry = country;
-		country = newCountry;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ChampionsProjectPackage.COMPETITION__COUNTRY, oldCountry, newCountry);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCountry(Country newCountry) {
-		if (newCountry != country) {
-			NotificationChain msgs = null;
-			if (country != null)
-				msgs = ((InternalEObject) country).eInverseRemove(this, ChampionsProjectPackage.COUNTRY__COMPETITION,
-						Country.class, msgs);
-			if (newCountry != null)
-				msgs = ((InternalEObject) newCountry).eInverseAdd(this, ChampionsProjectPackage.COUNTRY__COMPETITION,
-						Country.class, msgs);
-			msgs = basicSetCountry(newCountry, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChampionsProjectPackage.COMPETITION__COUNTRY,
-					newCountry, newCountry));
 	}
 
 	/**
@@ -319,8 +239,7 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	 */
 	public EList<Team> getTeam() {
 		if (team == null) {
-			team = new EObjectWithInverseResolvingEList.ManyInverse<Team>(Team.class, this,
-					ChampionsProjectPackage.COMPETITION__TEAM, ChampionsProjectPackage.TEAM__COMPETITION);
+			team = new EObjectContainmentEList<Team>(Team.class, this, ChampionsProjectPackage.COMPETITION__TEAM);
 		}
 		return team;
 	}
@@ -334,18 +253,11 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COMPETITION__COUNTRY:
-			if (country != null)
-				msgs = ((InternalEObject) country).eInverseRemove(this, ChampionsProjectPackage.COUNTRY__COMPETITION,
-						Country.class, msgs);
-			return basicSetCountry((Country) otherEnd, msgs);
 		case ChampionsProjectPackage.COMPETITION__TROPHY:
 			if (trophy != null)
 				msgs = ((InternalEObject) trophy).eInverseRemove(this, ChampionsProjectPackage.TROPHY__COMPETITION,
 						Trophy.class, msgs);
 			return basicSetTrophy((Trophy) otherEnd, msgs);
-		case ChampionsProjectPackage.COMPETITION__TEAM:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getTeam()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -358,8 +270,6 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COMPETITION__COUNTRY:
-			return basicSetCountry(null, msgs);
 		case ChampionsProjectPackage.COMPETITION__TROPHY:
 			return basicSetTrophy(null, msgs);
 		case ChampionsProjectPackage.COMPETITION__TEAM:
@@ -376,10 +286,6 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COMPETITION__COUNTRY:
-			if (resolve)
-				return getCountry();
-			return basicGetCountry();
 		case ChampionsProjectPackage.COMPETITION__TROPHY:
 			if (resolve)
 				return getTrophy();
@@ -403,9 +309,6 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COMPETITION__COUNTRY:
-			setCountry((Country) newValue);
-			return;
 		case ChampionsProjectPackage.COMPETITION__TROPHY:
 			setTrophy((Trophy) newValue);
 			return;
@@ -431,9 +334,6 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COMPETITION__COUNTRY:
-			setCountry((Country) null);
-			return;
 		case ChampionsProjectPackage.COMPETITION__TROPHY:
 			setTrophy((Trophy) null);
 			return;
@@ -458,8 +358,6 @@ public class CompetitionImpl extends MinimalEObjectImpl.Container implements Com
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COMPETITION__COUNTRY:
-			return country != null;
 		case ChampionsProjectPackage.COMPETITION__TROPHY:
 			return trophy != null;
 		case ChampionsProjectPackage.COMPETITION__TYPE:

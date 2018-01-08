@@ -75,6 +75,8 @@ public class ChampionsProjectFactoryImpl extends EFactoryImpl implements Champio
 			return createTrophy();
 		case ChampionsProjectPackage.AGENT:
 			return createAgent();
+		case ChampionsProjectPackage.FIFA:
+			return createFifa();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -210,6 +212,16 @@ public class ChampionsProjectFactoryImpl extends EFactoryImpl implements Champio
 	public Agent createAgent() {
 		AgentImpl agent = new AgentImpl();
 		return agent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Fifa createFifa() {
+		FifaImpl fifa = new FifaImpl();
+		return fifa;
 	}
 
 	/**

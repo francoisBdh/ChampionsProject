@@ -68,40 +68,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int TEAM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Player</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__PLAYER = 0;
-
-	/**
-	 * The feature id for the '<em><b>President</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__PRESIDENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Coach</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__COACH = 2;
-
-	/**
 	 * The feature id for the '<em><b>Stadium</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__STADIUM = 3;
+	int TEAM__STADIUM = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -110,16 +83,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__NAME = 4;
-
-	/**
-	 * The feature id for the '<em><b>Competition</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__COMPETITION = 5;
+	int TEAM__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Trophy</b></em>' reference list.
@@ -128,7 +92,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__TROPHY = 6;
+	int TEAM__TROPHY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -137,7 +101,34 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__TYPE = 7;
+	int TEAM__TYPE = 3;
+
+	/**
+	 * The feature id for the '<em><b>President</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__PRESIDENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Coach</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__COACH = 5;
+
+	/**
+	 * The feature id for the '<em><b>Player</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__PLAYER = 6;
 
 	/**
 	 * The number of structural features of the '<em>Team</em>' class.
@@ -146,7 +137,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM_FEATURE_COUNT = 8;
+	int TEAM_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Team</em>' class.
@@ -168,31 +159,22 @@ public interface ChampionsProjectPackage extends EPackage {
 	int COUNTRY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Competition</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COUNTRY__COMPETITION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Person</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COUNTRY__PERSON = 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY__NAME = 2;
+	int COUNTRY__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Competition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COUNTRY__COMPETITION = 1;
 
 	/**
 	 * The number of structural features of the '<em>Country</em>' class.
@@ -201,7 +183,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COUNTRY_FEATURE_COUNT = 3;
+	int COUNTRY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Country</em>' class.
@@ -232,22 +214,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int PERSON__AGE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PERSON__COUNTRY = 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON__NAME = 2;
+	int PERSON__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Person</em>' class.
@@ -256,7 +229,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 3;
+	int PERSON_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Person</em>' class.
@@ -287,15 +260,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	int PLAYER__AGE = PERSON__AGE;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__COUNTRY = PERSON__COUNTRY;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -305,22 +269,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int PLAYER__NAME = PERSON__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Team</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PLAYER__TEAM = PERSON_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Position</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER__POSITION = PERSON_FEATURE_COUNT + 1;
+	int PLAYER__POSITION = PERSON_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Status</b></em>' attribute.
@@ -329,7 +284,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER__STATUS = PERSON_FEATURE_COUNT + 2;
+	int PLAYER__STATUS = PERSON_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Contrat</b></em>' attribute.
@@ -338,7 +293,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER__CONTRAT = PERSON_FEATURE_COUNT + 3;
+	int PLAYER__CONTRAT = PERSON_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Agent</b></em>' reference.
@@ -347,7 +302,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER__AGENT = PERSON_FEATURE_COUNT + 4;
+	int PLAYER__AGENT = PERSON_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Player</em>' class.
@@ -356,7 +311,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLAYER_FEATURE_COUNT = PERSON_FEATURE_COUNT + 5;
+	int PLAYER_FEATURE_COUNT = PERSON_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Player</em>' class.
@@ -378,22 +333,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int COMPETITION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPETITION__COUNTRY = 0;
-
-	/**
 	 * The feature id for the '<em><b>Trophy</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__TROPHY = 1;
+	int COMPETITION__TROPHY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -402,7 +348,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__TYPE = 2;
+	int COMPETITION__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -411,16 +357,16 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__NAME = 3;
+	int COMPETITION__NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Team</b></em>' reference list.
+	 * The feature id for the '<em><b>Team</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__TEAM = 4;
+	int COMPETITION__TEAM = 3;
 
 	/**
 	 * The number of structural features of the '<em>Competition</em>' class.
@@ -429,7 +375,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION_FEATURE_COUNT = 5;
+	int COMPETITION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Competition</em>' class.
@@ -460,15 +406,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	int PRESIDENT__AGE = PERSON__AGE;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESIDENT__COUNTRY = PERSON__COUNTRY;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -478,22 +415,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int PRESIDENT__NAME = PERSON__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Team</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESIDENT__TEAM = PERSON_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>President</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESIDENT_FEATURE_COUNT = PERSON_FEATURE_COUNT + 1;
+	int PRESIDENT_FEATURE_COUNT = PERSON_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>President</em>' class.
@@ -524,15 +452,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	int COACH__AGE = PERSON__AGE;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COACH__COUNTRY = PERSON__COUNTRY;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -542,22 +461,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int COACH__NAME = PERSON__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Team</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COACH__TEAM = PERSON_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Contrat</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COACH__CONTRAT = PERSON_FEATURE_COUNT + 1;
+	int COACH__CONTRAT = PERSON_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Agent</b></em>' reference.
@@ -566,7 +476,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COACH__AGENT = PERSON_FEATURE_COUNT + 2;
+	int COACH__AGENT = PERSON_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Coach</em>' class.
@@ -575,7 +485,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COACH_FEATURE_COUNT = PERSON_FEATURE_COUNT + 3;
+	int COACH_FEATURE_COUNT = PERSON_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Coach</em>' class.
@@ -716,15 +626,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	int AGENT__AGE = PERSON__AGE;
 
 	/**
-	 * The feature id for the '<em><b>Country</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AGENT__COUNTRY = PERSON__COUNTRY;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -770,6 +671,43 @@ public interface ChampionsProjectPackage extends EPackage {
 	int AGENT_OPERATION_COUNT = PERSON_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link championsProject.impl.FifaImpl <em>Fifa</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see championsProject.impl.FifaImpl
+	 * @see championsProject.impl.ChampionsProjectPackageImpl#getFifa()
+	 * @generated
+	 */
+	int FIFA = 10;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIFA__COUNTRY = 0;
+
+	/**
+	 * The number of structural features of the '<em>Fifa</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIFA_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Fifa</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIFA_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link championsProject.PlayerStatus <em>Player Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -777,7 +715,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @see championsProject.impl.ChampionsProjectPackageImpl#getPlayerStatus()
 	 * @generated
 	 */
-	int PLAYER_STATUS = 10;
+	int PLAYER_STATUS = 11;
 
 	/**
 	 * The meta object id for the '{@link championsProject.PlayerPosition <em>Player Position</em>}' enum.
@@ -787,7 +725,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @see championsProject.impl.ChampionsProjectPackageImpl#getPlayerPosition()
 	 * @generated
 	 */
-	int PLAYER_POSITION = 11;
+	int PLAYER_POSITION = 12;
 
 	/**
 	 * The meta object id for the '{@link championsProject.CompetitionType <em>Competition Type</em>}' enum.
@@ -797,7 +735,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @see championsProject.impl.ChampionsProjectPackageImpl#getCompetitionType()
 	 * @generated
 	 */
-	int COMPETITION_TYPE = 12;
+	int COMPETITION_TYPE = 13;
 
 	/**
 	 * The meta object id for the '{@link championsProject.TeamType <em>Team Type</em>}' enum.
@@ -807,7 +745,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @see championsProject.impl.ChampionsProjectPackageImpl#getTeamType()
 	 * @generated
 	 */
-	int TEAM_TYPE = 13;
+	int TEAM_TYPE = 14;
 
 	/**
 	 * Returns the meta object for class '{@link championsProject.Team <em>Team</em>}'.
@@ -820,10 +758,10 @@ public interface ChampionsProjectPackage extends EPackage {
 	EClass getTeam();
 
 	/**
-	 * Returns the meta object for the reference list '{@link championsProject.Team#getPlayer <em>Player</em>}'.
+	 * Returns the meta object for the containment reference list '{@link championsProject.Team#getPlayer <em>Player</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Player</em>'.
+	 * @return the meta object for the containment reference list '<em>Player</em>'.
 	 * @see championsProject.Team#getPlayer()
 	 * @see #getTeam()
 	 * @generated
@@ -831,10 +769,10 @@ public interface ChampionsProjectPackage extends EPackage {
 	EReference getTeam_Player();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.Team#getPresident <em>President</em>}'.
+	 * Returns the meta object for the containment reference '{@link championsProject.Team#getPresident <em>President</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>President</em>'.
+	 * @return the meta object for the containment reference '<em>President</em>'.
 	 * @see championsProject.Team#getPresident()
 	 * @see #getTeam()
 	 * @generated
@@ -842,10 +780,10 @@ public interface ChampionsProjectPackage extends EPackage {
 	EReference getTeam_President();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.Team#getCoach <em>Coach</em>}'.
+	 * Returns the meta object for the containment reference '{@link championsProject.Team#getCoach <em>Coach</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Coach</em>'.
+	 * @return the meta object for the containment reference '<em>Coach</em>'.
 	 * @see championsProject.Team#getCoach()
 	 * @see #getTeam()
 	 * @generated
@@ -873,17 +811,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTeam_Name();
-
-	/**
-	 * Returns the meta object for the reference list '{@link championsProject.Team#getCompetition <em>Competition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Competition</em>'.
-	 * @see championsProject.Team#getCompetition()
-	 * @see #getTeam()
-	 * @generated
-	 */
-	EReference getTeam_Competition();
 
 	/**
 	 * Returns the meta object for the reference list '{@link championsProject.Team#getTrophy <em>Trophy</em>}'.
@@ -918,26 +845,15 @@ public interface ChampionsProjectPackage extends EPackage {
 	EClass getCountry();
 
 	/**
-	 * Returns the meta object for the reference list '{@link championsProject.Country#getCompetition <em>Competition</em>}'.
+	 * Returns the meta object for the containment reference list '{@link championsProject.Country#getCompetition <em>Competition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Competition</em>'.
+	 * @return the meta object for the containment reference list '<em>Competition</em>'.
 	 * @see championsProject.Country#getCompetition()
 	 * @see #getCountry()
 	 * @generated
 	 */
 	EReference getCountry_Competition();
-
-	/**
-	 * Returns the meta object for the reference list '{@link championsProject.Country#getPerson <em>Person</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Person</em>'.
-	 * @see championsProject.Country#getPerson()
-	 * @see #getCountry()
-	 * @generated
-	 */
-	EReference getCountry_Person();
 
 	/**
 	 * Returns the meta object for the attribute '{@link championsProject.Country#getName <em>Name</em>}'.
@@ -972,17 +888,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	EAttribute getPerson_Age();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.Person#getCountry <em>Country</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Country</em>'.
-	 * @see championsProject.Person#getCountry()
-	 * @see #getPerson()
-	 * @generated
-	 */
-	EReference getPerson_Country();
-
-	/**
 	 * Returns the meta object for the attribute '{@link championsProject.Person#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1002,17 +907,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPlayer();
-
-	/**
-	 * Returns the meta object for the reference '{@link championsProject.Player#getTeam <em>Team</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Team</em>'.
-	 * @see championsProject.Player#getTeam()
-	 * @see #getPlayer()
-	 * @generated
-	 */
-	EReference getPlayer_Team();
 
 	/**
 	 * Returns the meta object for the attribute '{@link championsProject.Player#getPosition <em>Position</em>}'.
@@ -1069,17 +963,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	EClass getCompetition();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.Competition#getCountry <em>Country</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Country</em>'.
-	 * @see championsProject.Competition#getCountry()
-	 * @see #getCompetition()
-	 * @generated
-	 */
-	EReference getCompetition_Country();
-
-	/**
 	 * Returns the meta object for the reference '{@link championsProject.Competition#getTrophy <em>Trophy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1113,10 +996,10 @@ public interface ChampionsProjectPackage extends EPackage {
 	EAttribute getCompetition_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link championsProject.Competition#getTeam <em>Team</em>}'.
+	 * Returns the meta object for the containment reference list '{@link championsProject.Competition#getTeam <em>Team</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Team</em>'.
+	 * @return the meta object for the containment reference list '<em>Team</em>'.
 	 * @see championsProject.Competition#getTeam()
 	 * @see #getCompetition()
 	 * @generated
@@ -1134,17 +1017,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	EClass getPresident();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.President#getTeam <em>Team</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Team</em>'.
-	 * @see championsProject.President#getTeam()
-	 * @see #getPresident()
-	 * @generated
-	 */
-	EReference getPresident_Team();
-
-	/**
 	 * Returns the meta object for class '{@link championsProject.Coach <em>Coach</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1153,17 +1025,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCoach();
-
-	/**
-	 * Returns the meta object for the reference '{@link championsProject.Coach#getTeam <em>Team</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Team</em>'.
-	 * @see championsProject.Coach#getTeam()
-	 * @see #getCoach()
-	 * @generated
-	 */
-	EReference getCoach_Team();
 
 	/**
 	 * Returns the meta object for the attribute '{@link championsProject.Coach#getContrat <em>Contrat</em>}'.
@@ -1306,6 +1167,27 @@ public interface ChampionsProjectPackage extends EPackage {
 	EReference getAgent_Coach();
 
 	/**
+	 * Returns the meta object for class '{@link championsProject.Fifa <em>Fifa</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fifa</em>'.
+	 * @see championsProject.Fifa
+	 * @generated
+	 */
+	EClass getFifa();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link championsProject.Fifa#getCountry <em>Country</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Country</em>'.
+	 * @see championsProject.Fifa#getCountry()
+	 * @see #getFifa()
+	 * @generated
+	 */
+	EReference getFifa_Country();
+
+	/**
 	 * Returns the meta object for enum '{@link championsProject.PlayerStatus <em>Player Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1379,7 +1261,7 @@ public interface ChampionsProjectPackage extends EPackage {
 		EClass TEAM = eINSTANCE.getTeam();
 
 		/**
-		 * The meta object literal for the '<em><b>Player</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Player</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1387,7 +1269,7 @@ public interface ChampionsProjectPackage extends EPackage {
 		EReference TEAM__PLAYER = eINSTANCE.getTeam_Player();
 
 		/**
-		 * The meta object literal for the '<em><b>President</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>President</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1395,7 +1277,7 @@ public interface ChampionsProjectPackage extends EPackage {
 		EReference TEAM__PRESIDENT = eINSTANCE.getTeam_President();
 
 		/**
-		 * The meta object literal for the '<em><b>Coach</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Coach</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1417,14 +1299,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEAM__NAME = eINSTANCE.getTeam_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Competition</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEAM__COMPETITION = eINSTANCE.getTeam_Competition();
 
 		/**
 		 * The meta object literal for the '<em><b>Trophy</b></em>' reference list feature.
@@ -1453,20 +1327,12 @@ public interface ChampionsProjectPackage extends EPackage {
 		EClass COUNTRY = eINSTANCE.getCountry();
 
 		/**
-		 * The meta object literal for the '<em><b>Competition</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Competition</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference COUNTRY__COMPETITION = eINSTANCE.getCountry_Competition();
-
-		/**
-		 * The meta object literal for the '<em><b>Person</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COUNTRY__PERSON = eINSTANCE.getCountry_Person();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1495,14 +1361,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		EAttribute PERSON__AGE = eINSTANCE.getPerson_Age();
 
 		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PERSON__COUNTRY = eINSTANCE.getPerson_Country();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1519,14 +1377,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PLAYER = eINSTANCE.getPlayer();
-
-		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PLAYER__TEAM = eINSTANCE.getPlayer_Team();
 
 		/**
 		 * The meta object literal for the '<em><b>Position</b></em>' attribute feature.
@@ -1571,14 +1421,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		EClass COMPETITION = eINSTANCE.getCompetition();
 
 		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPETITION__COUNTRY = eINSTANCE.getCompetition_Country();
-
-		/**
 		 * The meta object literal for the '<em><b>Trophy</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1603,7 +1445,7 @@ public interface ChampionsProjectPackage extends EPackage {
 		EAttribute COMPETITION__NAME = eINSTANCE.getCompetition_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Team</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1621,14 +1463,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		EClass PRESIDENT = eINSTANCE.getPresident();
 
 		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESIDENT__TEAM = eINSTANCE.getPresident_Team();
-
-		/**
 		 * The meta object literal for the '{@link championsProject.impl.CoachImpl <em>Coach</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1637,14 +1471,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COACH = eINSTANCE.getCoach();
-
-		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COACH__TEAM = eINSTANCE.getCoach_Team();
 
 		/**
 		 * The meta object literal for the '<em><b>Contrat</b></em>' attribute feature.
@@ -1755,6 +1581,24 @@ public interface ChampionsProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EReference AGENT__COACH = eINSTANCE.getAgent_Coach();
+
+		/**
+		 * The meta object literal for the '{@link championsProject.impl.FifaImpl <em>Fifa</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see championsProject.impl.FifaImpl
+		 * @see championsProject.impl.ChampionsProjectPackageImpl#getFifa()
+		 * @generated
+		 */
+		EClass FIFA = eINSTANCE.getFifa();
+
+		/**
+		 * The meta object literal for the '<em><b>Country</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FIFA__COUNTRY = eINSTANCE.getFifa_Country();
 
 		/**
 		 * The meta object literal for the '{@link championsProject.PlayerStatus <em>Player Status</em>}' enum.

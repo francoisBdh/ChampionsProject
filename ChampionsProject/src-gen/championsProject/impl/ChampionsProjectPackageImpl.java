@@ -9,6 +9,7 @@ import championsProject.Coach;
 import championsProject.Competition;
 import championsProject.CompetitionType;
 import championsProject.Country;
+import championsProject.Fifa;
 import championsProject.Person;
 import championsProject.Player;
 import championsProject.PlayerPosition;
@@ -103,6 +104,13 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	private EClass agentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fifaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,60 +218,6 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EReference getTeam_Player() {
-		return (EReference) teamEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeam_President() {
-		return (EReference) teamEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeam_Coach() {
-		return (EReference) teamEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeam_Stadium() {
-		return (EReference) teamEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTeam_Name() {
-		return (EAttribute) teamEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeam_Competition() {
-		return (EReference) teamEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTeam_Trophy() {
 		return (EReference) teamEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -272,8 +226,53 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTeam_President() {
+		return (EReference) teamEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTeam_Coach() {
+		return (EReference) teamEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTeam_Stadium() {
+		return (EReference) teamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTeam_Name() {
+		return (EAttribute) teamEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTeam_Trophy() {
+		return (EReference) teamEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getTeam_Type() {
-		return (EAttribute) teamEClass.getEStructuralFeatures().get(7);
+		return (EAttribute) teamEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -291,15 +290,6 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EReference getCountry_Competition() {
-		return (EReference) countryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getCountry_Person() {
 		return (EReference) countryEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -309,7 +299,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EAttribute getCountry_Name() {
-		return (EAttribute) countryEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) countryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -335,17 +325,8 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPerson_Country() {
-		return (EReference) personEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getPerson_Name() {
-		return (EAttribute) personEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) personEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -362,17 +343,8 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPlayer_Team() {
-		return (EReference) playerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getPlayer_Position() {
-		return (EAttribute) playerEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) playerEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -381,7 +353,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EAttribute getPlayer_Status() {
-		return (EAttribute) playerEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) playerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -390,7 +362,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EAttribute getPlayer_Contrat() {
-		return (EAttribute) playerEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) playerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -399,7 +371,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EReference getPlayer_Agent() {
-		return (EReference) playerEClass.getEStructuralFeatures().get(4);
+		return (EReference) playerEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -416,7 +388,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompetition_Country() {
+	public EReference getCompetition_Trophy() {
 		return (EReference) competitionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -425,17 +397,8 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompetition_Trophy() {
-		return (EReference) competitionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getCompetition_Type() {
-		return (EAttribute) competitionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) competitionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -444,7 +407,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EAttribute getCompetition_Name() {
-		return (EAttribute) competitionEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) competitionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -453,7 +416,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EReference getCompetition_Team() {
-		return (EReference) competitionEClass.getEStructuralFeatures().get(4);
+		return (EReference) competitionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -470,15 +433,6 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPresident_Team() {
-		return (EReference) presidentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCoach() {
 		return coachEClass;
 	}
@@ -488,17 +442,8 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCoach_Team() {
-		return (EReference) coachEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getCoach_Contrat() {
-		return (EAttribute) coachEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) coachEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -507,7 +452,7 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * @generated
 	 */
 	public EReference getCoach_Agent() {
-		return (EReference) coachEClass.getEStructuralFeatures().get(2);
+		return (EReference) coachEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -614,6 +559,24 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFifa() {
+		return fifaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFifa_Country() {
+		return (EReference) fifaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getPlayerStatus() {
 		return playerStatusEEnum;
 	}
@@ -675,44 +638,37 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 
 		// Create classes and their features
 		teamEClass = createEClass(TEAM);
-		createEReference(teamEClass, TEAM__PLAYER);
-		createEReference(teamEClass, TEAM__PRESIDENT);
-		createEReference(teamEClass, TEAM__COACH);
 		createEReference(teamEClass, TEAM__STADIUM);
 		createEAttribute(teamEClass, TEAM__NAME);
-		createEReference(teamEClass, TEAM__COMPETITION);
 		createEReference(teamEClass, TEAM__TROPHY);
 		createEAttribute(teamEClass, TEAM__TYPE);
+		createEReference(teamEClass, TEAM__PRESIDENT);
+		createEReference(teamEClass, TEAM__COACH);
+		createEReference(teamEClass, TEAM__PLAYER);
 
 		countryEClass = createEClass(COUNTRY);
-		createEReference(countryEClass, COUNTRY__COMPETITION);
-		createEReference(countryEClass, COUNTRY__PERSON);
 		createEAttribute(countryEClass, COUNTRY__NAME);
+		createEReference(countryEClass, COUNTRY__COMPETITION);
 
 		personEClass = createEClass(PERSON);
 		createEAttribute(personEClass, PERSON__AGE);
-		createEReference(personEClass, PERSON__COUNTRY);
 		createEAttribute(personEClass, PERSON__NAME);
 
 		playerEClass = createEClass(PLAYER);
-		createEReference(playerEClass, PLAYER__TEAM);
 		createEAttribute(playerEClass, PLAYER__POSITION);
 		createEAttribute(playerEClass, PLAYER__STATUS);
 		createEAttribute(playerEClass, PLAYER__CONTRAT);
 		createEReference(playerEClass, PLAYER__AGENT);
 
 		competitionEClass = createEClass(COMPETITION);
-		createEReference(competitionEClass, COMPETITION__COUNTRY);
 		createEReference(competitionEClass, COMPETITION__TROPHY);
 		createEAttribute(competitionEClass, COMPETITION__TYPE);
 		createEAttribute(competitionEClass, COMPETITION__NAME);
 		createEReference(competitionEClass, COMPETITION__TEAM);
 
 		presidentEClass = createEClass(PRESIDENT);
-		createEReference(presidentEClass, PRESIDENT__TEAM);
 
 		coachEClass = createEClass(COACH);
-		createEReference(coachEClass, COACH__TEAM);
 		createEAttribute(coachEClass, COACH__CONTRAT);
 		createEReference(coachEClass, COACH__AGENT);
 
@@ -729,6 +685,9 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		agentEClass = createEClass(AGENT);
 		createEReference(agentEClass, AGENT__PLAYER);
 		createEReference(agentEClass, AGENT__COACH);
+
+		fifaEClass = createEClass(FIFA);
+		createEReference(fifaEClass, FIFA__COUNTRY);
 
 		// Create enums
 		playerStatusEEnum = createEEnum(PLAYER_STATUS);
@@ -773,52 +732,40 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(teamEClass, Team.class, "Team", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTeam_Player(), this.getPlayer(), this.getPlayer_Team(), "player", null, 1, -1, Team.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeam_President(), this.getPresident(), this.getPresident_Team(), "president", null, 1, 1,
-				Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeam_Coach(), this.getCoach(), this.getCoach_Team(), "coach", null, 1, 1, Team.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTeam_Stadium(), this.getStadium(), this.getStadium_Team(), "stadium", null, 1, 1, Team.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTeam_Name(), ecorePackage.getEString(), "name", "", 0, 1, Team.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTeam_Competition(), this.getCompetition(), this.getCompetition_Team(), "competition", null, 1,
-				-1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTeam_Trophy(), this.getTrophy(), this.getTrophy_Team(), "trophy", null, 0, -1, Team.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTeam_Type(), this.getTeamType(), "type", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTeam_President(), this.getPresident(), null, "president", null, 1, 1, Team.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTeam_Coach(), this.getCoach(), null, "coach", null, 1, 1, Team.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getTeam_Player(), this.getPlayer(), null, "player", null, 1, -1, Team.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(countryEClass, Country.class, "Country", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCountry_Competition(), this.getCompetition(), this.getCompetition_Country(), "competition",
-				null, 0, -1, Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCountry_Person(), this.getPerson(), this.getPerson_Country(), "person", null, 0, -1,
-				Country.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCountry_Name(), ecorePackage.getEString(), "name", "", 0, 1, Country.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCountry_Competition(), this.getCompetition(), null, "competition", null, 0, -1, Country.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(personEClass, Person.class, "Person", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPerson_Age(), ecorePackage.getEInt(), "age", null, 0, 1, Person.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPerson_Country(), this.getCountry(), this.getCountry_Person(), "country", null, 1, 1,
-				Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_Name(), ecorePackage.getEString(), "name", "", 0, 1, Person.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(playerEClass, Player.class, "Player", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPlayer_Team(), this.getTeam(), this.getTeam_Player(), "team", null, 0, 1, Player.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Position(), this.getPlayerPosition(), "position", null, 0, 1, Player.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPlayer_Status(), this.getPlayerStatus(), "status", null, 0, 1, Player.class, !IS_TRANSIENT,
@@ -831,9 +778,6 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 
 		initEClass(competitionEClass, Competition.class, "Competition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompetition_Country(), this.getCountry(), this.getCountry_Competition(), "country", null, 0,
-				1, Competition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCompetition_Trophy(), this.getTrophy(), this.getTrophy_Competition(), "trophy", null, 1, 1,
 				Competition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -841,20 +785,14 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCompetition_Name(), ecorePackage.getEString(), "name", "", 0, 1, Competition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCompetition_Team(), this.getTeam(), this.getTeam_Competition(), "team", null, 1, -1,
-				Competition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompetition_Team(), this.getTeam(), null, "team", null, 1, -1, Competition.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(presidentEClass, President.class, "President", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPresident_Team(), this.getTeam(), this.getTeam_President(), "team", null, 0, 1,
-				President.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(coachEClass, Coach.class, "Coach", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCoach_Team(), this.getTeam(), this.getTeam_Coach(), "team", null, 0, 1, Coach.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getCoach_Contrat(), ecorePackage.getEInt(), "contrat", null, 0, 1, Coach.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCoach_Agent(), this.getAgent(), this.getAgent_Coach(), "agent", null, 0, 1, Coach.class,
@@ -887,6 +825,11 @@ public class ChampionsProjectPackageImpl extends EPackageImpl implements Champio
 		initEReference(getAgent_Coach(), this.getCoach(), this.getCoach_Agent(), "coach", null, 0, -1, Agent.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fifaEClass, Fifa.class, "Fifa", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFifa_Country(), this.getCountry(), null, "country", null, 1, -1, Fifa.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(playerStatusEEnum, PlayerStatus.class, "PlayerStatus");

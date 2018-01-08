@@ -7,8 +7,6 @@ import championsProject.ChampionsProjectPackage;
 import championsProject.Player;
 import championsProject.PlayerPosition;
 import championsProject.PlayerStatus;
-import championsProject.Team;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -25,7 +23,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link championsProject.impl.PlayerImpl#getTeam <em>Team</em>}</li>
  *   <li>{@link championsProject.impl.PlayerImpl#getPosition <em>Position</em>}</li>
  *   <li>{@link championsProject.impl.PlayerImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link championsProject.impl.PlayerImpl#getContrat <em>Contrat</em>}</li>
@@ -35,16 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class PlayerImpl extends PersonImpl implements Player {
-	/**
-	 * The cached value of the '{@link #getTeam() <em>Team</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTeam()
-	 * @generated
-	 * @ordered
-	 */
-	protected Team team;
-
 	/**
 	 * The default value of the '{@link #getPosition() <em>Position</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -132,74 +119,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	protected EClass eStaticClass() {
 		return ChampionsProjectPackage.Literals.PLAYER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Team getTeam() {
-		if (team != null && team.eIsProxy()) {
-			InternalEObject oldTeam = (InternalEObject) team;
-			team = (Team) eResolveProxy(oldTeam);
-			if (team != oldTeam) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ChampionsProjectPackage.PLAYER__TEAM,
-							oldTeam, team));
-			}
-		}
-		return team;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Team basicGetTeam() {
-		return team;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetTeam(Team newTeam, NotificationChain msgs) {
-		Team oldTeam = team;
-		team = newTeam;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ChampionsProjectPackage.PLAYER__TEAM, oldTeam, newTeam);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTeam(Team newTeam) {
-		if (newTeam != team) {
-			NotificationChain msgs = null;
-			if (team != null)
-				msgs = ((InternalEObject) team).eInverseRemove(this, ChampionsProjectPackage.TEAM__PLAYER, Team.class,
-						msgs);
-			if (newTeam != null)
-				msgs = ((InternalEObject) newTeam).eInverseAdd(this, ChampionsProjectPackage.TEAM__PLAYER, Team.class,
-						msgs);
-			msgs = basicSetTeam(newTeam, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChampionsProjectPackage.PLAYER__TEAM, newTeam,
-					newTeam));
 	}
 
 	/**
@@ -344,11 +263,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.PLAYER__TEAM:
-			if (team != null)
-				msgs = ((InternalEObject) team).eInverseRemove(this, ChampionsProjectPackage.TEAM__PLAYER, Team.class,
-						msgs);
-			return basicSetTeam((Team) otherEnd, msgs);
 		case ChampionsProjectPackage.PLAYER__AGENT:
 			if (agent != null)
 				msgs = ((InternalEObject) agent).eInverseRemove(this, ChampionsProjectPackage.AGENT__PLAYER,
@@ -366,8 +280,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.PLAYER__TEAM:
-			return basicSetTeam(null, msgs);
 		case ChampionsProjectPackage.PLAYER__AGENT:
 			return basicSetAgent(null, msgs);
 		}
@@ -382,10 +294,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ChampionsProjectPackage.PLAYER__TEAM:
-			if (resolve)
-				return getTeam();
-			return basicGetTeam();
 		case ChampionsProjectPackage.PLAYER__POSITION:
 			return getPosition();
 		case ChampionsProjectPackage.PLAYER__STATUS:
@@ -408,9 +316,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ChampionsProjectPackage.PLAYER__TEAM:
-			setTeam((Team) newValue);
-			return;
 		case ChampionsProjectPackage.PLAYER__POSITION:
 			setPosition((PlayerPosition) newValue);
 			return;
@@ -435,9 +340,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.PLAYER__TEAM:
-			setTeam((Team) null);
-			return;
 		case ChampionsProjectPackage.PLAYER__POSITION:
 			setPosition(POSITION_EDEFAULT);
 			return;
@@ -462,8 +364,6 @@ public class PlayerImpl extends PersonImpl implements Player {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.PLAYER__TEAM:
-			return team != null;
 		case ChampionsProjectPackage.PLAYER__POSITION:
 			return position != POSITION_EDEFAULT;
 		case ChampionsProjectPackage.PLAYER__STATUS:

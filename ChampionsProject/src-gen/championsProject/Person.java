@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link championsProject.Person#getAge <em>Age</em>}</li>
- *   <li>{@link championsProject.Person#getCountry <em>Country</em>}</li>
  *   <li>{@link championsProject.Person#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -48,34 +47,6 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setAge(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Country</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Country#getPerson <em>Person</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Country</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' reference.
-	 * @see #setCountry(Country)
-	 * @see championsProject.ChampionsProjectPackage#getPerson_Country()
-	 * @see championsProject.Country#getPerson
-	 * @model opposite="person" required="true"
-	 * @generated
-	 */
-	Country getCountry();
-
-	/**
-	 * Sets the value of the '{@link championsProject.Person#getCountry <em>Country</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' reference.
-	 * @see #getCountry()
-	 * @generated
-	 */
-	void setCountry(Country value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

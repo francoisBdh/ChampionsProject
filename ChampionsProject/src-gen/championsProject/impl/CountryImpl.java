@@ -5,8 +5,6 @@ package championsProject.impl;
 import championsProject.ChampionsProjectPackage;
 import championsProject.Competition;
 import championsProject.Country;
-import championsProject.Person;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -20,7 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -31,34 +29,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link championsProject.impl.CountryImpl#getCompetition <em>Competition</em>}</li>
- *   <li>{@link championsProject.impl.CountryImpl#getPerson <em>Person</em>}</li>
  *   <li>{@link championsProject.impl.CountryImpl#getName <em>Name</em>}</li>
+ *   <li>{@link championsProject.impl.CountryImpl#getCompetition <em>Competition</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class CountryImpl extends MinimalEObjectImpl.Container implements Country {
-	/**
-	 * The cached value of the '{@link #getCompetition() <em>Competition</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCompetition()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Competition> competition;
-
-	/**
-	 * The cached value of the '{@link #getPerson() <em>Person</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPerson()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Person> person;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,6 +55,16 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getCompetition() <em>Competition</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCompetition()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Competition> competition;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,23 +92,10 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 */
 	public EList<Competition> getCompetition() {
 		if (competition == null) {
-			competition = new EObjectWithInverseResolvingEList<Competition>(Competition.class, this,
-					ChampionsProjectPackage.COUNTRY__COMPETITION, ChampionsProjectPackage.COMPETITION__COUNTRY);
+			competition = new EObjectContainmentEList<Competition>(Competition.class, this,
+					ChampionsProjectPackage.COUNTRY__COMPETITION);
 		}
 		return competition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Person> getPerson() {
-		if (person == null) {
-			person = new EObjectWithInverseResolvingEList<Person>(Person.class, this,
-					ChampionsProjectPackage.COUNTRY__PERSON, ChampionsProjectPackage.PERSON__COUNTRY);
-		}
-		return person;
 	}
 
 	/**
@@ -151,30 +125,11 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ChampionsProjectPackage.COUNTRY__COMPETITION:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getCompetition()).basicAdd(otherEnd, msgs);
-		case ChampionsProjectPackage.COUNTRY__PERSON:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getPerson()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ChampionsProjectPackage.COUNTRY__COMPETITION:
 			return ((InternalEList<?>) getCompetition()).basicRemove(otherEnd, msgs);
-		case ChampionsProjectPackage.COUNTRY__PERSON:
-			return ((InternalEList<?>) getPerson()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -187,12 +142,10 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COUNTRY__COMPETITION:
-			return getCompetition();
-		case ChampionsProjectPackage.COUNTRY__PERSON:
-			return getPerson();
 		case ChampionsProjectPackage.COUNTRY__NAME:
 			return getName();
+		case ChampionsProjectPackage.COUNTRY__COMPETITION:
+			return getCompetition();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,16 +159,12 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case ChampionsProjectPackage.COUNTRY__NAME:
+			setName((String) newValue);
+			return;
 		case ChampionsProjectPackage.COUNTRY__COMPETITION:
 			getCompetition().clear();
 			getCompetition().addAll((Collection<? extends Competition>) newValue);
-			return;
-		case ChampionsProjectPackage.COUNTRY__PERSON:
-			getPerson().clear();
-			getPerson().addAll((Collection<? extends Person>) newValue);
-			return;
-		case ChampionsProjectPackage.COUNTRY__NAME:
-			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -229,14 +178,11 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COUNTRY__COMPETITION:
-			getCompetition().clear();
-			return;
-		case ChampionsProjectPackage.COUNTRY__PERSON:
-			getPerson().clear();
-			return;
 		case ChampionsProjectPackage.COUNTRY__NAME:
 			setName(NAME_EDEFAULT);
+			return;
+		case ChampionsProjectPackage.COUNTRY__COMPETITION:
+			getCompetition().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -250,12 +196,10 @@ public class CountryImpl extends MinimalEObjectImpl.Container implements Country
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.COUNTRY__COMPETITION:
-			return competition != null && !competition.isEmpty();
-		case ChampionsProjectPackage.COUNTRY__PERSON:
-			return person != null && !person.isEmpty();
 		case ChampionsProjectPackage.COUNTRY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case ChampionsProjectPackage.COUNTRY__COMPETITION:
+			return competition != null && !competition.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

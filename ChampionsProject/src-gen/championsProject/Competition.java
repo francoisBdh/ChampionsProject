@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Competition#getCountry <em>Country</em>}</li>
  *   <li>{@link championsProject.Competition#getTrophy <em>Trophy</em>}</li>
  *   <li>{@link championsProject.Competition#getType <em>Type</em>}</li>
  *   <li>{@link championsProject.Competition#getName <em>Name</em>}</li>
@@ -27,34 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Competition extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Country</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Country#getCompetition <em>Competition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Country</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' reference.
-	 * @see #setCountry(Country)
-	 * @see championsProject.ChampionsProjectPackage#getCompetition_Country()
-	 * @see championsProject.Country#getCompetition
-	 * @model opposite="competition"
-	 * @generated
-	 */
-	Country getCountry();
-
-	/**
-	 * Sets the value of the '{@link championsProject.Competition#getCountry <em>Country</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Country</em>' reference.
-	 * @see #getCountry()
-	 * @generated
-	 */
-	void setCountry(Country value);
-
 	/**
 	 * Returns the value of the '<em><b>Trophy</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link championsProject.Trophy#getCompetition <em>Competition</em>}'.
@@ -140,19 +111,17 @@ public interface Competition extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Team</b></em>' reference list.
+	 * Returns the value of the '<em><b>Team</b></em>' containment reference list.
 	 * The list contents are of type {@link championsProject.Team}.
-	 * It is bidirectional and its opposite is '{@link championsProject.Team#getCompetition <em>Competition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Team</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team</em>' reference list.
+	 * @return the value of the '<em>Team</em>' containment reference list.
 	 * @see championsProject.ChampionsProjectPackage#getCompetition_Team()
-	 * @see championsProject.Team#getCompetition
-	 * @model opposite="competition" required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Team> getTeam();

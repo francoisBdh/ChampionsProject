@@ -3,15 +3,10 @@
 package championsProject.impl;
 
 import championsProject.ChampionsProjectPackage;
-import championsProject.Country;
 import championsProject.Person;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -24,7 +19,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link championsProject.impl.PersonImpl#getAge <em>Age</em>}</li>
- *   <li>{@link championsProject.impl.PersonImpl#getCountry <em>Country</em>}</li>
  *   <li>{@link championsProject.impl.PersonImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -50,16 +44,6 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected int age = AGE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountry()
-	 * @generated
-	 * @ordered
-	 */
-	protected Country country;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -126,74 +110,6 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Country getCountry() {
-		if (country != null && country.eIsProxy()) {
-			InternalEObject oldCountry = (InternalEObject) country;
-			country = (Country) eResolveProxy(oldCountry);
-			if (country != oldCountry) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ChampionsProjectPackage.PERSON__COUNTRY,
-							oldCountry, country));
-			}
-		}
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Country basicGetCountry() {
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCountry(Country newCountry, NotificationChain msgs) {
-		Country oldCountry = country;
-		country = newCountry;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ChampionsProjectPackage.PERSON__COUNTRY, oldCountry, newCountry);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCountry(Country newCountry) {
-		if (newCountry != country) {
-			NotificationChain msgs = null;
-			if (country != null)
-				msgs = ((InternalEObject) country).eInverseRemove(this, ChampionsProjectPackage.COUNTRY__PERSON,
-						Country.class, msgs);
-			if (newCountry != null)
-				msgs = ((InternalEObject) newCountry).eInverseAdd(this, ChampionsProjectPackage.COUNTRY__PERSON,
-						Country.class, msgs);
-			msgs = basicSetCountry(newCountry, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ChampionsProjectPackage.PERSON__COUNTRY, newCountry,
-					newCountry));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -216,45 +132,10 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ChampionsProjectPackage.PERSON__COUNTRY:
-			if (country != null)
-				msgs = ((InternalEObject) country).eInverseRemove(this, ChampionsProjectPackage.COUNTRY__PERSON,
-						Country.class, msgs);
-			return basicSetCountry((Country) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ChampionsProjectPackage.PERSON__COUNTRY:
-			return basicSetCountry(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ChampionsProjectPackage.PERSON__AGE:
 			return getAge();
-		case ChampionsProjectPackage.PERSON__COUNTRY:
-			if (resolve)
-				return getCountry();
-			return basicGetCountry();
 		case ChampionsProjectPackage.PERSON__NAME:
 			return getName();
 		}
@@ -271,9 +152,6 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case ChampionsProjectPackage.PERSON__AGE:
 			setAge((Integer) newValue);
-			return;
-		case ChampionsProjectPackage.PERSON__COUNTRY:
-			setCountry((Country) newValue);
 			return;
 		case ChampionsProjectPackage.PERSON__NAME:
 			setName((String) newValue);
@@ -293,9 +171,6 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 		case ChampionsProjectPackage.PERSON__AGE:
 			setAge(AGE_EDEFAULT);
 			return;
-		case ChampionsProjectPackage.PERSON__COUNTRY:
-			setCountry((Country) null);
-			return;
 		case ChampionsProjectPackage.PERSON__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -313,8 +188,6 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case ChampionsProjectPackage.PERSON__AGE:
 			return age != AGE_EDEFAULT;
-		case ChampionsProjectPackage.PERSON__COUNTRY:
-			return country != null;
 		case ChampionsProjectPackage.PERSON__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}

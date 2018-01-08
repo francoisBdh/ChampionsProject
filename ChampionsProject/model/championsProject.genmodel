@@ -35,44 +35,37 @@
       <genEnumLiterals ecoreEnumLiteral="championsProject.ecore#//TeamType/national"/>
     </genEnums>
     <genClasses ecoreClass="championsProject.ecore#//Team">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/player"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/president"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/coach"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/stadium"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Team/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/competition"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/trophy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Team/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/president"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/coach"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Team/player"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Country">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Country/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Country/competition"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Country/person"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Country/name"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Person/age"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Person/country"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Person/name"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Player">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Player/team"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Player/position"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Player/status"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Player/contrat"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Player/agent"/>
     </genClasses>
     <genClasses ecoreClass="championsProject.ecore#//Competition">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Competition/country"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Competition/trophy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Competition/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Competition/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Competition/team"/>
     </genClasses>
-    <genClasses ecoreClass="championsProject.ecore#//President">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//President/team"/>
-    </genClasses>
+    <genClasses ecoreClass="championsProject.ecore#//President"/>
     <genClasses ecoreClass="championsProject.ecore#//Coach">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Coach/team"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute championsProject.ecore#//Coach/contrat"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Coach/agent"/>
     </genClasses>
@@ -89,6 +82,9 @@
     <genClasses ecoreClass="championsProject.ecore#//Agent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Agent/player"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference championsProject.ecore#//Agent/coach"/>
+    </genClasses>
+    <genClasses ecoreClass="championsProject.ecore#//Fifa">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference championsProject.ecore#//Fifa/country"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
