@@ -36,28 +36,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link championsProject.impl.TeamImpl#getStadium <em>Stadium</em>}</li>
  *   <li>{@link championsProject.impl.TeamImpl#getName <em>Name</em>}</li>
  *   <li>{@link championsProject.impl.TeamImpl#getTrophy <em>Trophy</em>}</li>
  *   <li>{@link championsProject.impl.TeamImpl#getType <em>Type</em>}</li>
  *   <li>{@link championsProject.impl.TeamImpl#getPresident <em>President</em>}</li>
  *   <li>{@link championsProject.impl.TeamImpl#getCoach <em>Coach</em>}</li>
  *   <li>{@link championsProject.impl.TeamImpl#getPlayer <em>Player</em>}</li>
+ *   <li>{@link championsProject.impl.TeamImpl#getStadium <em>Stadium</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
-	/**
-	 * The cached value of the '{@link #getStadium() <em>Stadium</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStadium()
-	 * @generated
-	 * @ordered
-	 */
-	protected Stadium stadium;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -137,6 +127,16 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	 * @ordered
 	 */
 	protected EList<Player> player;
+
+	/**
+	 * The cached value of the '{@link #getStadium() <em>Stadium</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStadium()
+	 * @generated
+	 * @ordered
+	 */
+	protected Stadium stadium;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -275,24 +275,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	 * @generated
 	 */
 	public Stadium getStadium() {
-		if (stadium != null && stadium.eIsProxy()) {
-			InternalEObject oldStadium = (InternalEObject) stadium;
-			stadium = (Stadium) eResolveProxy(oldStadium);
-			if (stadium != oldStadium) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ChampionsProjectPackage.TEAM__STADIUM,
-							oldStadium, stadium));
-			}
-		}
-		return stadium;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Stadium basicGetStadium() {
 		return stadium;
 	}
 
@@ -324,11 +306,11 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 		if (newStadium != stadium) {
 			NotificationChain msgs = null;
 			if (stadium != null)
-				msgs = ((InternalEObject) stadium).eInverseRemove(this, ChampionsProjectPackage.STADIUM__TEAM,
-						Stadium.class, msgs);
+				msgs = ((InternalEObject) stadium).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ChampionsProjectPackage.TEAM__STADIUM, null, msgs);
 			if (newStadium != null)
-				msgs = ((InternalEObject) newStadium).eInverseAdd(this, ChampionsProjectPackage.STADIUM__TEAM,
-						Stadium.class, msgs);
+				msgs = ((InternalEObject) newStadium).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ChampionsProjectPackage.TEAM__STADIUM, null, msgs);
 			msgs = basicSetStadium(newStadium, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -401,11 +383,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.TEAM__STADIUM:
-			if (stadium != null)
-				msgs = ((InternalEObject) stadium).eInverseRemove(this, ChampionsProjectPackage.STADIUM__TEAM,
-						Stadium.class, msgs);
-			return basicSetStadium((Stadium) otherEnd, msgs);
 		case ChampionsProjectPackage.TEAM__TROPHY:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getTrophy()).basicAdd(otherEnd, msgs);
 		}
@@ -420,8 +397,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case ChampionsProjectPackage.TEAM__STADIUM:
-			return basicSetStadium(null, msgs);
 		case ChampionsProjectPackage.TEAM__TROPHY:
 			return ((InternalEList<?>) getTrophy()).basicRemove(otherEnd, msgs);
 		case ChampionsProjectPackage.TEAM__PRESIDENT:
@@ -430,6 +405,8 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 			return basicSetCoach(null, msgs);
 		case ChampionsProjectPackage.TEAM__PLAYER:
 			return ((InternalEList<?>) getPlayer()).basicRemove(otherEnd, msgs);
+		case ChampionsProjectPackage.TEAM__STADIUM:
+			return basicSetStadium(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -442,10 +419,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ChampionsProjectPackage.TEAM__STADIUM:
-			if (resolve)
-				return getStadium();
-			return basicGetStadium();
 		case ChampionsProjectPackage.TEAM__NAME:
 			return getName();
 		case ChampionsProjectPackage.TEAM__TROPHY:
@@ -458,6 +431,8 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 			return getCoach();
 		case ChampionsProjectPackage.TEAM__PLAYER:
 			return getPlayer();
+		case ChampionsProjectPackage.TEAM__STADIUM:
+			return getStadium();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -471,9 +446,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ChampionsProjectPackage.TEAM__STADIUM:
-			setStadium((Stadium) newValue);
-			return;
 		case ChampionsProjectPackage.TEAM__NAME:
 			setName((String) newValue);
 			return;
@@ -494,6 +466,9 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 			getPlayer().clear();
 			getPlayer().addAll((Collection<? extends Player>) newValue);
 			return;
+		case ChampionsProjectPackage.TEAM__STADIUM:
+			setStadium((Stadium) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -506,9 +481,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.TEAM__STADIUM:
-			setStadium((Stadium) null);
-			return;
 		case ChampionsProjectPackage.TEAM__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -527,6 +499,9 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 		case ChampionsProjectPackage.TEAM__PLAYER:
 			getPlayer().clear();
 			return;
+		case ChampionsProjectPackage.TEAM__STADIUM:
+			setStadium((Stadium) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -539,8 +514,6 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.TEAM__STADIUM:
-			return stadium != null;
 		case ChampionsProjectPackage.TEAM__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ChampionsProjectPackage.TEAM__TROPHY:
@@ -553,6 +526,8 @@ public class TeamImpl extends MinimalEObjectImpl.Container implements Team {
 			return coach != null;
 		case ChampionsProjectPackage.TEAM__PLAYER:
 			return player != null && !player.isEmpty();
+		case ChampionsProjectPackage.TEAM__STADIUM:
+			return stadium != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -1,12 +1,14 @@
 
+Livrable :
+
+- Mettre tous les fichiers
+- READ ME -> explications des réalisations
+
+
 Fifa fifa { 
-    'France', 'Italie', 'Allemagne'
+    France : 'Ligue 1', 'Coupe de France'
 }
 
-
-Country {
-   Country France : 'Ligue 1', 'Coupe de France'
-}
 
 Competition Ligue 1 {
     type : 'championship'

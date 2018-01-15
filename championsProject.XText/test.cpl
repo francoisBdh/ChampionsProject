@@ -1,0 +1,277 @@
+
+
+Fifa {
+	France {
+		
+		
+		
+		
+		Ligue1 {
+			trophy Hexagone {
+				team (PSG)
+			}
+			
+			team {
+				PSG {
+					stadium ParcDesPrinces {
+						
+					}
+					
+					president :
+						President Nasser {
+							age 46
+						}
+					
+					
+					coach :
+						Coach Emery {
+							age 45
+							contrat 4
+						}
+					
+					
+					player :
+						Player Neymar {
+							age 24
+							position leftMidfielder
+							status starter
+							contrat 5
+						},
+						
+						Player Cavani {
+							age 30
+							position striker
+							status starter
+							contrat 2
+						},
+						
+						Player Mbappe {
+							age 19
+							position striker
+							status starter
+							contrat 5
+						},
+						
+						Player Verratti {
+							age 24
+							position centralMidfielder
+							status starter
+							contrat 5
+						},
+						
+						Player Meunier {
+							age 24
+							position rightBack
+							status substitute
+							contrat 5
+						}
+					
+					
+				},
+				
+				RCSA {
+					stadium LaMeinau {
+						
+					}
+					
+					president :
+						President Keller {
+							age 46
+						}
+					
+					
+					coach :
+						Coach Laurey {
+							age 45
+							contrat 4
+						}
+					
+					
+					player :
+						Player Terrier {
+							age 20
+							position striker
+							status starter
+							contrat 5
+						},
+						
+						Player Blayac {
+							age 32
+							position striker
+							status substitute
+							contrat 2
+						},
+						
+						Player Kamara {
+							age 21
+							position goalKeeper
+							status starter
+							contrat 5
+						},
+						
+						Player Martin {
+							age 28
+							position centralMidfielder
+							status starter
+							contrat 5
+						},
+						
+						Player Lienard {
+							age 26
+							position centralMidfielder
+							status starter
+							contrat 2
+						}
+					
+					
+				}
+			}
+		}
+	}
+	
+	,
+	
+	Italie {
+		
+		Calcio {
+			trophy Scudetto {
+
+			}
+			
+			team {
+				Rome {
+					stadium Olimpico {
+						capacity 60000
+					}
+					
+					president :
+						President Mario {
+							age 55
+						}
+					
+					
+					coach :
+						Coach Spaletti {
+							age 48
+							contrat 4
+						}
+					
+					
+					player :
+						Player Totti {
+							age 40
+							position striker
+							status starter
+							contrat 2
+						},
+						
+						Player deRossi {
+							age 40
+							position striker
+							status starter
+							contrat 2
+						},
+						
+						Player Manolas {
+							age 27
+							position centralBack
+							status starter
+							contrat 2
+						},
+						
+						Player Alisson {
+							age 24
+							position goalKeeper
+							status starter
+							contrat 4
+						},
+						
+						Player Strootman {
+							age 33
+							position centralMidfielder
+							status starter
+							contrat 3
+						},
+						
+						Player ElSharawi {
+							age 25
+							position leftMidfielder
+							status starter
+							contrat 4
+						}
+					
+					
+				},
+				
+				Juventus {
+					stadium AllianzStadium {
+						capacity 450000
+					}
+					
+					president :
+						President Filipe {
+							age 55
+						}
+					
+					
+					coach :
+						Coach Allegri {
+							age 48
+							contrat 4
+						}
+					
+					
+					player :
+						Player Dybala {
+							age 22
+							position striker
+							status starter
+							contrat 4
+						},
+						
+						Player Matuidi {
+							age 40
+							position centralMidfielder
+							status substitute
+							contrat 4
+						},
+						
+						Player Buffon {
+							age 40
+							position goalKeeper
+							status starter
+							contrat 1
+						},
+						
+						Player Higuain {
+							age 29
+							position striker
+							status starter
+							contrat 4
+						},
+						
+						Player Marchisio {
+							age 32
+							position centralMidfielder
+							status substitute
+							contrat 3
+						},
+						
+						Player Sandro {
+							age 25
+							position leftBack
+							status starter
+							contrat 4
+						}
+					
+				}
+			}
+		}
+	}
+}
+	
+	
+
+
+
+

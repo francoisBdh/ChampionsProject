@@ -15,13 +15,13 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Team#getStadium <em>Stadium</em>}</li>
  *   <li>{@link championsProject.Team#getName <em>Name</em>}</li>
  *   <li>{@link championsProject.Team#getTrophy <em>Trophy</em>}</li>
  *   <li>{@link championsProject.Team#getType <em>Type</em>}</li>
  *   <li>{@link championsProject.Team#getPresident <em>President</em>}</li>
  *   <li>{@link championsProject.Team#getCoach <em>Coach</em>}</li>
  *   <li>{@link championsProject.Team#getPlayer <em>Player</em>}</li>
+ *   <li>{@link championsProject.Team#getStadium <em>Stadium</em>}</li>
  * </ul>
  *
  * @see championsProject.ChampionsProjectPackage#getTeam()
@@ -98,28 +98,26 @@ public interface Team extends EObject {
 	void setCoach(Coach value);
 
 	/**
-	 * Returns the value of the '<em><b>Stadium</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Stadium#getTeam <em>Team</em>}'.
+	 * Returns the value of the '<em><b>Stadium</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Stadium</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Stadium</em>' reference.
+	 * @return the value of the '<em>Stadium</em>' containment reference.
 	 * @see #setStadium(Stadium)
 	 * @see championsProject.ChampionsProjectPackage#getTeam_Stadium()
-	 * @see championsProject.Stadium#getTeam
-	 * @model opposite="team" required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Stadium getStadium();
 
 	/**
-	 * Sets the value of the '{@link championsProject.Team#getStadium <em>Stadium</em>}' reference.
+	 * Sets the value of the '{@link championsProject.Team#getStadium <em>Stadium</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Stadium</em>' reference.
+	 * @param value the new value of the '<em>Stadium</em>' containment reference.
 	 * @see #getStadium()
 	 * @generated
 	 */

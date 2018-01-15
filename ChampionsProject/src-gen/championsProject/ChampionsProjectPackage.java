@@ -68,22 +68,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int TEAM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Stadium</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEAM__STADIUM = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__NAME = 1;
+	int TEAM__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Trophy</b></em>' reference list.
@@ -92,7 +83,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__TROPHY = 2;
+	int TEAM__TROPHY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -101,7 +92,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__TYPE = 3;
+	int TEAM__TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>President</b></em>' containment reference.
@@ -110,7 +101,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__PRESIDENT = 4;
+	int TEAM__PRESIDENT = 3;
 
 	/**
 	 * The feature id for the '<em><b>Coach</b></em>' containment reference.
@@ -119,7 +110,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__COACH = 5;
+	int TEAM__COACH = 4;
 
 	/**
 	 * The feature id for the '<em><b>Player</b></em>' containment reference list.
@@ -128,7 +119,16 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEAM__PLAYER = 6;
+	int TEAM__PLAYER = 5;
+
+	/**
+	 * The feature id for the '<em><b>Stadium</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEAM__STADIUM = 6;
 
 	/**
 	 * The number of structural features of the '<em>Team</em>' class.
@@ -333,22 +333,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int COMPETITION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Trophy</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPETITION__TROPHY = 0;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__TYPE = 1;
+	int COMPETITION__TYPE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -357,7 +348,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__NAME = 2;
+	int COMPETITION__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Team</b></em>' containment reference list.
@@ -366,7 +357,16 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPETITION__TEAM = 3;
+	int COMPETITION__TEAM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Trophy</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPETITION__TROPHY = 3;
 
 	/**
 	 * The number of structural features of the '<em>Competition</em>' class.
@@ -507,22 +507,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int STADIUM = 7;
 
 	/**
-	 * The feature id for the '<em><b>Team</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STADIUM__TEAM = 0;
-
-	/**
 	 * The feature id for the '<em><b>Capacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STADIUM__CAPACITY = 1;
+	int STADIUM__CAPACITY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -531,7 +522,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STADIUM__NAME = 2;
+	int STADIUM__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Stadium</em>' class.
@@ -540,7 +531,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STADIUM_FEATURE_COUNT = 3;
+	int STADIUM_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Stadium</em>' class.
@@ -562,22 +553,13 @@ public interface ChampionsProjectPackage extends EPackage {
 	int TROPHY = 8;
 
 	/**
-	 * The feature id for the '<em><b>Competition</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TROPHY__COMPETITION = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TROPHY__NAME = 1;
+	int TROPHY__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Team</b></em>' reference list.
@@ -586,7 +568,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TROPHY__TEAM = 2;
+	int TROPHY__TEAM = 1;
 
 	/**
 	 * The number of structural features of the '<em>Trophy</em>' class.
@@ -595,7 +577,7 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TROPHY_FEATURE_COUNT = 3;
+	int TROPHY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Trophy</em>' class.
@@ -791,10 +773,10 @@ public interface ChampionsProjectPackage extends EPackage {
 	EReference getTeam_Coach();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.Team#getStadium <em>Stadium</em>}'.
+	 * Returns the meta object for the containment reference '{@link championsProject.Team#getStadium <em>Stadium</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Stadium</em>'.
+	 * @return the meta object for the containment reference '<em>Stadium</em>'.
 	 * @see championsProject.Team#getStadium()
 	 * @see #getTeam()
 	 * @generated
@@ -963,10 +945,10 @@ public interface ChampionsProjectPackage extends EPackage {
 	EClass getCompetition();
 
 	/**
-	 * Returns the meta object for the reference '{@link championsProject.Competition#getTrophy <em>Trophy</em>}'.
+	 * Returns the meta object for the containment reference '{@link championsProject.Competition#getTrophy <em>Trophy</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Trophy</em>'.
+	 * @return the meta object for the containment reference '<em>Trophy</em>'.
 	 * @see championsProject.Competition#getTrophy()
 	 * @see #getCompetition()
 	 * @generated
@@ -1059,17 +1041,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	EClass getStadium();
 
 	/**
-	 * Returns the meta object for the reference list '{@link championsProject.Stadium#getTeam <em>Team</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Team</em>'.
-	 * @see championsProject.Stadium#getTeam()
-	 * @see #getStadium()
-	 * @generated
-	 */
-	EReference getStadium_Team();
-
-	/**
 	 * Returns the meta object for the attribute '{@link championsProject.Stadium#getCapacity <em>Capacity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1100,17 +1071,6 @@ public interface ChampionsProjectPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTrophy();
-
-	/**
-	 * Returns the meta object for the reference '{@link championsProject.Trophy#getCompetition <em>Competition</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Competition</em>'.
-	 * @see championsProject.Trophy#getCompetition()
-	 * @see #getTrophy()
-	 * @generated
-	 */
-	EReference getTrophy_Competition();
 
 	/**
 	 * Returns the meta object for the attribute '{@link championsProject.Trophy#getName <em>Name</em>}'.
@@ -1285,7 +1245,7 @@ public interface ChampionsProjectPackage extends EPackage {
 		EReference TEAM__COACH = eINSTANCE.getTeam_Coach();
 
 		/**
-		 * The meta object literal for the '<em><b>Stadium</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Stadium</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1421,7 +1381,7 @@ public interface ChampionsProjectPackage extends EPackage {
 		EClass COMPETITION = eINSTANCE.getCompetition();
 
 		/**
-		 * The meta object literal for the '<em><b>Trophy</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Trophy</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1499,14 +1459,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		EClass STADIUM = eINSTANCE.getStadium();
 
 		/**
-		 * The meta object literal for the '<em><b>Team</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STADIUM__TEAM = eINSTANCE.getStadium_Team();
-
-		/**
 		 * The meta object literal for the '<em><b>Capacity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1531,14 +1483,6 @@ public interface ChampionsProjectPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TROPHY = eINSTANCE.getTrophy();
-
-		/**
-		 * The meta object literal for the '<em><b>Competition</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TROPHY__COMPETITION = eINSTANCE.getTrophy_Competition();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

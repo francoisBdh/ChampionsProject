@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Competition#getTrophy <em>Trophy</em>}</li>
  *   <li>{@link championsProject.Competition#getType <em>Type</em>}</li>
  *   <li>{@link championsProject.Competition#getName <em>Name</em>}</li>
  *   <li>{@link championsProject.Competition#getTeam <em>Team</em>}</li>
+ *   <li>{@link championsProject.Competition#getTrophy <em>Trophy</em>}</li>
  * </ul>
  *
  * @see championsProject.ChampionsProjectPackage#getCompetition()
@@ -27,28 +27,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Competition extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Trophy</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Trophy#getCompetition <em>Competition</em>}'.
+	 * Returns the value of the '<em><b>Trophy</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Trophy</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Trophy</em>' reference.
+	 * @return the value of the '<em>Trophy</em>' containment reference.
 	 * @see #setTrophy(Trophy)
 	 * @see championsProject.ChampionsProjectPackage#getCompetition_Trophy()
-	 * @see championsProject.Trophy#getCompetition
-	 * @model opposite="competition" required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Trophy getTrophy();
 
 	/**
-	 * Sets the value of the '{@link championsProject.Competition#getTrophy <em>Trophy</em>}' reference.
+	 * Sets the value of the '{@link championsProject.Competition#getTrophy <em>Trophy</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Trophy</em>' reference.
+	 * @param value the new value of the '<em>Trophy</em>' containment reference.
 	 * @see #getTrophy()
 	 * @generated
 	 */

@@ -2,8 +2,6 @@
  */
 package championsProject;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Stadium#getTeam <em>Team</em>}</li>
  *   <li>{@link championsProject.Stadium#getCapacity <em>Capacity</em>}</li>
  *   <li>{@link championsProject.Stadium#getName <em>Name</em>}</li>
  * </ul>
@@ -25,24 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Stadium extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Team</b></em>' reference list.
-	 * The list contents are of type {@link championsProject.Team}.
-	 * It is bidirectional and its opposite is '{@link championsProject.Team#getStadium <em>Stadium</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Team</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Team</em>' reference list.
-	 * @see championsProject.ChampionsProjectPackage#getStadium_Team()
-	 * @see championsProject.Team#getStadium
-	 * @model opposite="stadium"
-	 * @generated
-	 */
-	EList<Team> getTeam();
-
 	/**
 	 * Returns the value of the '<em><b>Capacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->

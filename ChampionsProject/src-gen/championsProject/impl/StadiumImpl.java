@@ -4,22 +4,10 @@ package championsProject.impl;
 
 import championsProject.ChampionsProjectPackage;
 import championsProject.Stadium;
-import championsProject.Team;
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +17,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link championsProject.impl.StadiumImpl#getTeam <em>Team</em>}</li>
  *   <li>{@link championsProject.impl.StadiumImpl#getCapacity <em>Capacity</em>}</li>
  *   <li>{@link championsProject.impl.StadiumImpl#getName <em>Name</em>}</li>
  * </ul>
@@ -37,16 +24,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium {
-	/**
-	 * The cached value of the '{@link #getTeam() <em>Team</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTeam()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Team> team;
-
 	/**
 	 * The default value of the '{@link #getCapacity() <em>Capacity</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -111,19 +88,6 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Team> getTeam() {
-		if (team == null) {
-			team = new EObjectWithInverseResolvingEList<Team>(Team.class, this, ChampionsProjectPackage.STADIUM__TEAM,
-					ChampionsProjectPackage.TEAM__STADIUM);
-		}
-		return team;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getCapacity() {
 		return capacity;
 	}
@@ -168,40 +132,9 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ChampionsProjectPackage.STADIUM__TEAM:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getTeam()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ChampionsProjectPackage.STADIUM__TEAM:
-			return ((InternalEList<?>) getTeam()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ChampionsProjectPackage.STADIUM__TEAM:
-			return getTeam();
 		case ChampionsProjectPackage.STADIUM__CAPACITY:
 			return getCapacity();
 		case ChampionsProjectPackage.STADIUM__NAME:
@@ -219,10 +152,6 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ChampionsProjectPackage.STADIUM__TEAM:
-			getTeam().clear();
-			getTeam().addAll((Collection<? extends Team>) newValue);
-			return;
 		case ChampionsProjectPackage.STADIUM__CAPACITY:
 			setCapacity((Integer) newValue);
 			return;
@@ -241,9 +170,6 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.STADIUM__TEAM:
-			getTeam().clear();
-			return;
 		case ChampionsProjectPackage.STADIUM__CAPACITY:
 			setCapacity(CAPACITY_EDEFAULT);
 			return;
@@ -262,8 +188,6 @@ public class StadiumImpl extends MinimalEObjectImpl.Container implements Stadium
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ChampionsProjectPackage.STADIUM__TEAM:
-			return team != null && !team.isEmpty();
 		case ChampionsProjectPackage.STADIUM__CAPACITY:
 			return capacity != CAPACITY_EDEFAULT;
 		case ChampionsProjectPackage.STADIUM__NAME:

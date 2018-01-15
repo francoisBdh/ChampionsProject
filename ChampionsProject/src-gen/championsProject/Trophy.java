@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link championsProject.Trophy#getCompetition <em>Competition</em>}</li>
  *   <li>{@link championsProject.Trophy#getName <em>Name</em>}</li>
  *   <li>{@link championsProject.Trophy#getTeam <em>Team</em>}</li>
  * </ul>
@@ -25,34 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Trophy extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Competition</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link championsProject.Competition#getTrophy <em>Trophy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Competition</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Competition</em>' reference.
-	 * @see #setCompetition(Competition)
-	 * @see championsProject.ChampionsProjectPackage#getTrophy_Competition()
-	 * @see championsProject.Competition#getTrophy
-	 * @model opposite="trophy" required="true"
-	 * @generated
-	 */
-	Competition getCompetition();
-
-	/**
-	 * Sets the value of the '{@link championsProject.Trophy#getCompetition <em>Competition</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Competition</em>' reference.
-	 * @see #getCompetition()
-	 * @generated
-	 */
-	void setCompetition(Competition value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>""</code>.
